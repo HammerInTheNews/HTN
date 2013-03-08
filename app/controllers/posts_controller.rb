@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 		@post = Post.new(params[:post])
 		#if post is valid - go to index
 	  	if @post.save
-	  		redirect_to post_path
+	  		redirect_to posts_path
 	  	else
 	  		render :new
 	  	end
