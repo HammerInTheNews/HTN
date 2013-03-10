@@ -1,8 +1,13 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+				
+</head>
+
 <h1>Ahoy, Matey!</h1>
 
 <ul><% @posts.each do |p| %>
-  <li><%=p.title %></li>
-  <li><%=p.body %></li>
+  <li><%=p.title %>
+  <%=p.body %></li>
   
 <% end %>
 </ul>

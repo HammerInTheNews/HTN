@@ -2,13 +2,113 @@
 <html>
 <head>
   <title>HTN</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+      
+	  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 
-<%= yield %>
 
-</body>
+	  <%= stylesheet_link_tag    "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" />
+	  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body><script type="text/javascript">ANCHORFREE_VERSION="623161526"</script><script type='text/javascript'>var _AF2$ = {'SN':'HSSHIELD00CA','IP':'69.22.179.74','CH':'HSSCNL000394','CT':'XX','HST':'','AFH':'hss70','RN':Math.floor(Math.random()*999),'TOP':(parent.location!=document.location||top.location!=document.location)?0:1,'AFVER':'2.88','fbw':false,'FBWCNT':0, 'FBWCNTNAME':'FBWCNT_FIREFOX', 'NOFBWNAME':'NO_FBW_FIREFOX'};if(/^(.*,)?(11C)(,.*)?$/g.exec(_AF2$.CT)!=null&&_AF2$.CH!='HSSCNL000242'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/par.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}document.write("<style type='text/css' title='AFc_css"+_AF2$.RN+"' >.AFc_body"+_AF2$.RN+"{} .AFc_all"+_AF2$.RN+",a.AFc_all"+_AF2$.RN+":hover,a.AFc_all"+_AF2$.RN+":visited{outline:none;background:transparent;border:none;margin:0;padding:0;top:0;left:0;text-decoration:none;overflow:hidden;display:block;z-index:666999;}</style>");</script><style type='text/css'>.AFhss_dpnone{display:none;width:0;height:0}</style><img src="about:blank" id="AFhss_trk0" name="AFhss_trk0" style="display:none" /><img src="about:blank"id="AFhss_trk"name="AFhss_trk"style="display:none"/><div id="AFhss_dfs"class="AFhss_dpnone"><div id="AFhss_adrp0"class="AFhss_dpnone"></div><div id="AFhss_adrp1"class="AFhss_dpnone"></div><div id="AFhss_adrp2"class="AFhss_dpnone"></div><div id="AFhss_adrp3"class="AFhss_dpnone"></div><div id="AFhss_adrp4"class="AFhss_dpnone"></div><div id="AFhss_adrp5"class="AFhss_dpnone"></div><div id="AFhss_adrp6"class="AFhss_dpnone"></div><div id="AFhss_adrp7"class="AFhss_dpnone"></div><div id="AFhss_adrp8"class="AFhss_dpnone"></div><div id="AFhss_adrp9"class="AFhss_dpnone"></div></div><script type='text/javascript'>if(_AF2$.TOP==1){if(_AF2$.CH=='HSSCNL000242'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/41.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else if(_AF2$.CH=='HSSCNL000248'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/60f.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else if(_AF2$.CH=='HSSCNL000249'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/61f.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else if(_AF2$.CH=='HSSCNL000484' || _AF2$.CH=='HSSCNL000447' || _AF2$.CH=='HSSCNL000504' || _AF2$.CH=='HSSCNL000505' || _AF2$.CH=='HSSCNL000506'){document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/62fbw-f2ask.js?v="+ANCHORFREE_VERSION+"' type='text/javascript'></scr"+"ipt>")}else{var m=new RegExp(/&FBWCNT_FIREFOX=([0-9]+)/g).exec(_AF2$.HST);_AF2$.FBWCNT=(m!=null&&typeof(m[1])!='undefined')?parseInt(m[1]):0;if(parseFloat(_AF2$.AFVER)>=2.03&&/NO_FBW_FIREFOX/.test(_AF2$.HST)==false&&_AF2$.FBWCNT<10&&navigator.appVersion.indexOf("Win")!=-1){_AF2$.strl=1998;_AF2$.fbw=true}document.write("<scr"+"ipt src='http://box.anchorfree.net/insert/62_new.js?v="+ANCHORFREE_VERSION+9997+"' type='text/javascript'></scr"+"ipt>")}}</script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">HammerInTheNews</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Hammer In The News | Artifice is the New Steels</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+ 
+ 	<%= yield %>
+
+  </body>
 </html>
