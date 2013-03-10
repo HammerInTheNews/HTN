@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 	#after making index action, you need to make index.html.erb
 	def index
 	  #this accesses all the posts from the model 'Post' and stores them in @post
-	  @posts = Post.all
+	  #the includes method ensures that comments will be loaded simultaneously with Posts
+	  @posts = Post.includes(:comments).limit(3)
 	end
 
 	#for you to see new posts, need a new action
@@ -21,6 +22,10 @@ class PostsController < ApplicationController
 	  	end
 	end
 
+	def edit
+ 	  @post = Post.find(params[:id])
+	end
+	
 	def update
 	end
 

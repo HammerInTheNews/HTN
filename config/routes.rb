@@ -1,6 +1,8 @@
 HTN::Application.routes.draw do
   #this is so you can have rails create routes to your post model
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   root to: 'posts#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
