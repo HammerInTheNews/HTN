@@ -3,8 +3,13 @@
 				
 </head>
 
+<div class="hero-unit">
+        <h1>Hammer In The News | Artifice is the New Steel</h1>
+        <p>I'd rather be a Hammer than a Nail.  Yes I would.  If I only could.  I surely would.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      </div>
 
-<!-- Example row of columns -->
+      <!-- Example row of columns -->
       <% @posts.each do |post| %>
       <div class="row">
         <div class="span4">
@@ -14,6 +19,11 @@
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
         <% end %>
+      <h2><%= link_to "New Post", new_post_path %></h2>
+
+      <hr>
+<!-- Example row of columns -->
+
       </div>
     
 
