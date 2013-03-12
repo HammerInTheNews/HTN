@@ -12,9 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require_tree .
-$(document).ready(function() {
-	$(".ellipsis").dotdotdot({
-		after: "a.read-more"
-	});
-});

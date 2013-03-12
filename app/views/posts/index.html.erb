@@ -22,16 +22,24 @@
 
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
+
+
       <div class="row">
-        <div class="span4 ellipsis">
+        <div class="span4">
           <h2 class="headline"><%=post.title %></h2>
-          <div>
-            <p><%= truncate post.body, length: 360 %>
-            <%= link_to "read more", post %>
-            <%= render post.comments %></p>
+            <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </a>
+              <div class="media-body">
+             
+                <p class= "pull-left"><%= truncate post.body, length: 360 %>
+                <%= link_to "read more", post %>
+                <%= render post.comments %></p>
+              </div>
             
           </div>
-        </div>
+       </div> 
       <% end %>
       
       <hr>

@@ -1,25 +1,26 @@
 <div class="field">
-<%= form_for @post do |form| %>
-  
-  <% if @post.errors.any? %>
-    <h2>Something is messed up here!</h2>
-    <% @post.errors.full_messages.each do |error| %>
-      <p style="color:red"><%=error %></p>
+  <%= form_for @post do |form| %>
+    
+    <% if @post.errors.any? %>
+      <h2>Something is messed up here!</h2>
+      <% @post.errors.full_messages.each do |error| %>
+        <p style="color:red"><%=error %></p>
+      <% end %>
     <% end %>
+
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :body %>
+      <%= form.text_area :body, :class => 'ckeditor' %>
+    </div>
+
+    <%= form.submit %>
+   
+   
   <% end %>
 
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <%= form.submit %>
-
-
-<% end %>
 </div>
