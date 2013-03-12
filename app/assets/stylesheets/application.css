@@ -16,4 +16,8 @@ body { padding-top: 60px;
 }
 h2.headline { font-family: 'PT Sans Narrow', sans-serif; }
 
+h2.subheadline { font-family: 'PT Sans', sans-serif; }
+
 p { font-family: 'PT Serif', serif; }
+
+div.truncate { height: 30px;}

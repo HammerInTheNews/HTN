@@ -23,11 +23,13 @@
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
       <div class="row">
-        <div class="span4">
+        <div class="span4 truncate">
           <h2 class="headline"><%=post.title %></h2>
-          <p><%=post.body %></p>
-          <p><%= render post.comments %>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <div class="ellipsis">
+            <p><%=post.body %></p>
+            <p><%= render post.comments %>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+          </div>
         </div>
       <% end %>
       
