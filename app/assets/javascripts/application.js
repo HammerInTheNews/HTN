@@ -13,9 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-    $(document).ready(function() {
-    	alert($(".truncate").length)
-    	$(".ellipsis").dotdotdot({
-    		height: 30
-    	});
-    });
+$(document).ready(function() {
+	$(".ellipsis").dotdotdot({
+		after: "a.read-more"
+	});
+});

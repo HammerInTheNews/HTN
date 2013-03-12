@@ -18,6 +18,6 @@ h2.headline { font-family: 'PT Sans Narrow', sans-serif; }
 
 h2.subheadline { font-family: 'PT Sans', sans-serif; }
 
-p { font-family: 'PT Serif', serif; }
+p { font-family: 'PT Serif', serif; font-weight: 575; }
 
-div.truncate { height: 30px;}
+div.ellipsis { }

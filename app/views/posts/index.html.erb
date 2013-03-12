@@ -2,7 +2,7 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 				
 </head>
-
+    
     <div id="myCarousel" class="carousel slide">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -23,12 +23,13 @@
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
       <div class="row">
-        <div class="span4 truncate">
+        <div class="span4 ellipsis">
           <h2 class="headline"><%=post.title %></h2>
-          <div class="ellipsis">
-            <p><%=post.body %></p>
-            <p><%= render post.comments %>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
+          <div>
+            <p><%= truncate post.body, length: 360 %>
+            <%= link_to "read more", post %>
+            <%= render post.comments %></p>
+            
           </div>
         </div>
       <% end %>
