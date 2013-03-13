@@ -32,8 +32,7 @@
                 <img class="media-object" src="http://placehold.it/64x64">
               </a>
               <div class="media-body">
-             
-                <p class= "pull-left"><%= truncate post.body, length: 360 %>
+                <p class= "pull-left"><%= raw truncate post.body, length: 360 %>
                 <%= link_to "read more", post %>
                 <%= render post.comments %></p>
               </div>

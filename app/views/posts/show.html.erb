@@ -1,6 +1,6 @@
 <h2 class="headline"><%= @post.title %></h2>
 
  <p><%= @post.id %></p>
-    <p><%= @post.body %></p>
+    <p><%= raw @post.body %></p>
     <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
     <p><%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
