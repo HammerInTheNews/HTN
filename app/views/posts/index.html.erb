@@ -11,9 +11,9 @@
       </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
-        <div class="active item"><img src="http://hammeringthenews.files.wordpress.com/2013/02/mayor_on_wings.jpg" alt="Bob Bratina" /></div>
-        <div class="item"><img src="http://hammeringthenews.files.wordpress.com/2013/02/mount_rushmore_hamilton6.jpg" alt="Mount Rushmore Hamilton" /></div>
-        <div class="item"><img src="http://hammeringthenews.files.wordpress.com/2013/03/unicorn_cupcake.jpg" alt="Hatecakes" /></div>
+        <div class="active item"><img src="https://lh6.googleusercontent.com/-ouL43ixaSF8/UUEnaVTDw2I/AAAAAAAAAkg/U7mK97oZdcs/s835/OLG+0089.jpg" alt="Bob Bratina" /></div>
+        <div class="item"><img src="https://lh4.googleusercontent.com/-02Mf7LPLfng/UUEnbE_aQtI/AAAAAAAAAkk/n0WrjOi5iXU/s835/OLG+0001.jpg" alt="Mount Rushmore Hamilton" /></div>
+        <div class="item"><img src="https://lh6.googleusercontent.com/-FhU348pFOTI/UUEo2LTGI-I/AAAAAAAAAk0/1aO7eJc2c0Q/s835/photo.jpg" alt="Hatecakes" /></div>
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -25,22 +25,24 @@
 
 
       <div class="row">
-        <div class="span4">
-          <h2 class="headline"><%=post.title %></h2>
-            <div class="media">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="http://placehold.it/64x64">
-              </a>
-              <div class="media-body">
-                <p class= "pull-left"><%= raw truncate post.body, length: 360 %>
-                <%= link_to "read more", post %>
-                <%= render post.comments %></p>
-              </div>
+        <div class="span3">
+          <h2 class="headline"><%= link_to post.title, post %></h2>
             
-          </div>
-       </div> 
-      <% end %>
+              <p class= "pull-left"><%= raw truncate post.body, length: 360 %>
+                <%= link_to "read more", post %>
+                </p>
+              
+        </div> 
       
+      <% end %>
+        
+      <div class="row">
+        <div class="span3">
+          <h2 class="headline">Money-making Ads</h2>
+          <p><img src="http://placehold.it/350x300"></p>
+              
+        </div>
+      </div>   
       <hr>
       
           <h2 class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></h2>
@@ -49,5 +51,7 @@
 <!-- Example row of columns -->
 
       </div>
+
+      Photo by maerzbow
     
 

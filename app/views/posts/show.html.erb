@@ -1,6 +1,30 @@
-<h2 class="headline"><%= @post.title %></h2>
+    <div class="container-fluid">
+	    <div class="row-fluid">
+		    <div class="span6">
+		    <!--Body content-->
+		    <h2 class="headline"><%= @post.title %></h2>
 
- <p><%= @post.id %></p>
-    <p><%= raw @post.body %></p>
-    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
-    <p><%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
+			    <p><%= raw @post.body %></p>
+			    <hr>
+			    <h2 class="headline">Comments</h2>
+			    <%= render @post.comments  %>
+		    	<%= render 'comments/form',
+		    				comment: @post.comments.build,
+		    				post: @post %>
+			    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
+			    <p><%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
+			    <p><%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>	
+		    </div>
+		    <div class="span4">
+		    <!--Sidebar content-->
+		    	<h2 class="headline">Related Articles</h2>
+		    	<p><img src="http://placehold.it/350x300"></p>
+		    	<p><img src="http://placehold.it/350x150"></p>
+		    	
+		    </div>
+	    </div>
+    </div>
+
+	
+
+	  

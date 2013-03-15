@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@posts = Post.includes(:comments).order("created_at DESC").limit(3)
+
 	end
 
 	def edit
@@ -44,6 +46,8 @@ class PostsController < ApplicationController
 	end
 
 	def destroy
+		@post = Post.find(params[:id]).destroy
+		redirect_to posts_path
 	end
 
 end
