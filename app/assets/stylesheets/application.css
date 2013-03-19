@@ -32,3 +32,11 @@ hr {
     margin: 12px auto 8px;
     width: 60px;
 }
+
+.preview img {
+	width: 2px;
+}
+
+.article {
+	width: 32%;
+}

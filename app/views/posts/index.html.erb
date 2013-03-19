@@ -28,7 +28,7 @@
         <div class="span3">
           <h2 class="headline"><%= link_to post.title, post %></h2>
             
-              <p class= "pull-left"><%= raw truncate post.body, length: 360 %>
+              <p class= "pull-left preview"><%= raw truncate post.body, length: 360 %>
                 <%= link_to "read more", post %>
                 </p>
               

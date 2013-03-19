@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 #changed production for heroku

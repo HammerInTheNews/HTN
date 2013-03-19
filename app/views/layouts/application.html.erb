@@ -20,7 +20,11 @@
             uiColor: '#9AB8F3'
           });</script>
   </head>
-
+<% if user_signed_in? %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign In", new_user_session_path %>
+<% end %>
   <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">

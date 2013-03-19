@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_filter :authenticate_user!, except: [:index, :show]
 
 	#after making index action, you need to make index.html.erb
 	def index
@@ -13,11 +14,12 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params[:post])
+		#protects post
+		@post = current_user.posts.build(params[:post])
 		#if post is valid - go to index
 	  	if @post.save
 	  		#back to the index for you
-	  		redirect_to(@post)
+	  		redirect_to posts_path
 	  	else
 	  		render :new #gives you the new view
 	  	end

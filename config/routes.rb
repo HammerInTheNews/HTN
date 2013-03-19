@@ -1,4 +1,6 @@
 HTN::Application.routes.draw do
+  devise_for :users
+
   #this is so you can have rails create routes to your post model
   resources :posts do
     resources :comments
