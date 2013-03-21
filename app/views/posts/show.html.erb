@@ -11,6 +11,9 @@
 		    	<%= render 'comments/form',
 		    				comment: @post.comments.build,
 		    				post: @post %>
+		    	<p>
+		    	  <h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></h2>
+		    	</p>
 			    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
 			    <p><%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
 			    <p><%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>	

@@ -1,6 +1,6 @@
 HTN::Application.routes.draw do
   devise_for :users
-
+  get 'tags/:tag', to: 'posts#index', as: :tag
   #this is so you can have rails create routes to your post model
   resources :posts do
     resources :comments

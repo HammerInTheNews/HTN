@@ -20,6 +20,7 @@
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
 
+
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
 
@@ -27,7 +28,8 @@
       <div class="row">
         <div class="span3">
           <h2 class="headline"><%= link_to post.title, post %></h2>
-            
+          <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
+
               <p class= "pull-left preview"><%= raw truncate post.body, length: 360 %>
                 <%= link_to "read more", post %>
                 </p>

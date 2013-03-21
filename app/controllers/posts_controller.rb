@@ -5,7 +5,11 @@ before_filter :authenticate_user!, except: [:index, :show]
 	def index
 	  #this accesses all the posts from the model 'Post' and stores them in @post
 	  #the includes method ensures that comments will be loaded simultaneously with Posts
-	  @posts = Post.includes(:comments).order("created_at DESC").limit(3)
+	  if params[:tag]
+        @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag])
+	  else	
+	    @posts = Post.includes(:comments).order("created_at DESC").limit(3)
+	  end
 	end
 
 	#for you to see new posts, need a new action

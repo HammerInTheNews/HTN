@@ -13,10 +13,19 @@
       <%= form.text_field :title %>
     </div>
 
+
     <div>
       <%= form.label :body %>
       <%= form.text_area :body, :class => 'ckeditor' %>
     </div>
+   <hr>
+
+    <div>
+      <%= form.label :tag_list, "Tags (separated by commmas)" %>
+      <%= form.text_field :tag_list %>
+    </div>
+
+
 
     <%= form.submit %>
    
