@@ -15,12 +15,15 @@
 		    	  <h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></h2>
 		    	</p>
 			    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
-			    <p><%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
-			    <p><%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %>	
+			    <%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
+			    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
 		    </div>
 		    <div class="span4">
 		    <!--Sidebar content-->
+
 		    	<h2 class="headline">Related Articles</h2>
+		    	<h2 class="headline"><%= @random_post %></h2>
+
 		    	<p><img src="http://placehold.it/350x300"></p>
 		    	<p><img src="http://placehold.it/350x150"></p>
 		    	

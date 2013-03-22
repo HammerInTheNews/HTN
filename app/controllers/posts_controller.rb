@@ -8,7 +8,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  if params[:tag]
         @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag])
 	  else	
-	    @posts = Post.includes(:comments).order("created_at DESC").limit(3)
+	    @posts = Post.includes(:comments).order("created_at DESC")
 	  end
 	end
 
@@ -31,8 +31,8 @@ before_filter :authenticate_user!, except: [:index, :show]
 
 	def show
 		@post = Post.find(params[:id])
-		@posts = Post.includes(:comments).order("created_at DESC").limit(3)
-
+		@posts = Post.includes(:comments).order("created_at DESC")
+		@random_posts = Post.find(params[:id]) #didn't get it going yet
 	end
 
 	def edit
@@ -55,5 +55,6 @@ before_filter :authenticate_user!, except: [:index, :show]
 		@post = Post.find(params[:id]).destroy
 		redirect_to posts_path
 	end
+
 
 end

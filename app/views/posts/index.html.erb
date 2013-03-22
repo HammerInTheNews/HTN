@@ -2,7 +2,7 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 				
 </head>
-    
+    <h2 class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></h2>
     <div id="myCarousel" class="carousel slide">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -21,31 +21,30 @@
     </div>
 
     <div class="container-fluid">
+            
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
-
-    
-      <div class="row-fluid">
-        <div class="span3">
+        <div class="row-fluid">
+        <div class="alignleft span3">
           <h2 class="headline"><%= link_to post.title, post %></h2>
           <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
-              <p class= "pull-left preview"><%= raw truncate post.body, length: 360 %>
+              <p class= "pull-left preview"><%= raw truncate post.body, length: 300 %>
                 <%= link_to "read more", post %>
-                </p>
-              
+              </p>
+            
         </div> 
       
       <% end %>
         
       
-        <div class="span3">
+        <div class="span3 sidebar">
           <h2 class="headline">Money-making Ads</h2>
           <p><img src="http://placehold.it/350x300"></p>
               
         </div>
 
-          <h2 class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></h2>
+         
         
       <hr>
 <!-- Example row of columns -->
