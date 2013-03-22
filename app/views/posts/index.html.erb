@@ -20,12 +20,12 @@
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
 
-
+    <div class="container-fluid">
       <!-- Example row of columns -->
       <% @posts.each do |post| %>
 
-
-      <div class="row">
+    
+      <div class="row-fluid">
         <div class="span3">
           <h2 class="headline"><%= link_to post.title, post %></h2>
           <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
@@ -38,22 +38,20 @@
       
       <% end %>
         
-      <div class="row">
+      
         <div class="span3">
           <h2 class="headline">Money-making Ads</h2>
           <p><img src="http://placehold.it/350x300"></p>
               
         </div>
-      </div>   
-      <hr>
-      
+
           <h2 class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></h2>
         
       <hr>
 <!-- Example row of columns -->
 
       </div>
-
+    </div>
       Photo by maerzbow
     
 
