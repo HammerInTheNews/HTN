@@ -1,11 +1,14 @@
-    <div class="container-fluid">
-	    <div class="row-fluid">
+    <div class="container">
+	    <div class="row">
 		    <div class="span6">
 		    <!--Body content-->
 		    <h2 class="headline"><%= @post.title %></h2>
 
 			    <p><%= raw @post.body %></p>
+			    <iframe src="http://www.facebook.com/plugins/like.php?href=google.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=recommend&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe> 
+			    <a href="http://twitter.com/share" class="twitter-share-button" data-url="google.com" data-text="You NEED to see this story." data-count="horizontal" data-via="MyTwitterAccountUsername">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 			    <hr>
+
 			    <h2 class="headline">Comments</h2>
 			    <%= render @post.comments  %>
 		    	<%= render 'comments/form',
@@ -26,7 +29,8 @@
 
 		    	<p><img src="http://placehold.it/350x300"></p>
 		    	<p><img src="http://placehold.it/350x150"></p>
-		    	
+		    	<div class='spread'>
+  
 		    </div>
 	    </div>
     </div>
