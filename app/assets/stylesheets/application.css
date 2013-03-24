@@ -43,3 +43,15 @@ hr {
 .article {
 	width: 32%;
 }
+#footer-spacer {
+    height: 36px;
+}
+
+footer { 
+	border-top: 1px solid #000;
+    height: 120px;
+
+
+
+} 
+.sub_twit div { padding-left: 20px;  0 50% no-repeat; } 
