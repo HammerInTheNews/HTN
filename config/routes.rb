@@ -1,4 +1,8 @@
 HTN::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   devise_for :users
   get 'tags/:tag', to: 'posts#index', as: :tag
   #this is so you can have rails create routes to your post model

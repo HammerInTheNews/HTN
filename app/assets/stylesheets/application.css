@@ -55,3 +55,44 @@ footer {
 
 } 
 .sub_twit div { padding-left: 20px;  0 50% no-repeat; } 
+
+#footer{
+    height:130px;
+    }
+#center_footer{
+    background:#000;
+    height: 130px;
+    width: 980px;
+    margin:0 auto;
+    }
+#left_footer,#right_footer {
+    width:450px;
+    padding:20px;
+    float:left;
+    }
+#left_footer b{
+    color:#fff;
+    }
+#left_footer li{
+    float:left;
+    margin:0 20px;
+    }
+#left_footer img{
+    width:60px;
+    height:60px;
+    }
+#right_footer{
+    float:right;
+    }
+#right_footer a{ 
+    color:#aaa;
+    padding:0 10px;
+    line-height: 21px;
+    font-size: 13px;
+    font-weight:bold;
+    }
+#footer span{
+    color:#ccc;
+    font-size: 13px;
+    margin-left: 150px;
+    }
