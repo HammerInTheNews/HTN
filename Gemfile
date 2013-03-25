@@ -7,7 +7,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
-
+gem "paperclip", "~> 3.0"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 #changed production for heroku
