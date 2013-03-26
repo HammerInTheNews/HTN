@@ -11,7 +11,15 @@ end
 
 module HTN
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
+   config.after_initialize do
+    Disqus::defaults[:account] = "hammerinthenewscomments"
+    # so that the comments will load up in development environment
+    Disqus::defaults[:developer] = true
+    Disqus::defaults[:container_id] = "disqus_thread"
+    Disqus::defaults[:show_powered_by] = false
+   end   
+
+     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 

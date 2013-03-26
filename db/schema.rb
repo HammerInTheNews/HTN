@@ -94,6 +94,10 @@ ActiveRecord::Schema.define(:version => 20130325235302) do
     t.datetime "updated_at",                             :null => false
     t.string   "uid"
     t.string   "provider"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"

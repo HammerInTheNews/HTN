@@ -10,6 +10,9 @@
 			    <hr>
 
 			    <h2 class="headline">Comments</h2>
+			    <div id ="disqus_thread">
+					<%= disqus_thread.html_safe %>
+				</div>
 			    <%= render @post.comments  %>
 		    	<%= render 'comments/form',
 		    				comment: @post.comments.build,
