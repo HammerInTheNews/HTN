@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title, :tag_list
+  attr_accessible :body, :title, :tag_list, :photo
   acts_as_taggable
   validates :title, presence: true
   validates :body, presence: true
@@ -7,4 +7,5 @@ class Post < ActiveRecord::Base
 
   has_many :comments
   belongs_to :user
+  has_attached_file :photo
 end

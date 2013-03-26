@@ -8,7 +8,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  if params[:tag]
         @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag])
 	  else	
-	    @posts = Post.includes(:comments).order("created_at DESC").limit(3)
+	    @posts = Post.includes(:comments).order("created_at DESC")
 	  end
 	end
 
