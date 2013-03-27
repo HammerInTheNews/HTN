@@ -11,7 +11,7 @@
             <h1 class="headline"><%= link_to post.title, post %></h1>
             <img src="http://placehold.it/714x250>">
             <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
-
+              
             <p>
               <%= raw truncate post.body, length: 1900 %>
               <%= link_to "read more", post %>
@@ -20,6 +20,7 @@
                      post_path(  post, :anchor => "disqus_thread"),
                     :"data-disqus-identifer" =>   post.id %>
             </p>
+
           </div>
 
 
@@ -56,6 +57,8 @@
         <div class="span5 widgets">
           <h2 class="headline">Money-making Ads</h2>
           <p><img src="http://placehold.it/350x300"></p>
+          <hr>
+
         </div>
       </div> 
     </div>

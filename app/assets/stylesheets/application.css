@@ -23,7 +23,7 @@ h2.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1p
 
 h1.headline a { color: black;} 
 h2.headline a { color: black;} 
-h2.subheadline { font-family: 'PT Sans', sans-serif; }
+.subheadline { font-family: 'PT Sans', sans-serif; font-weight: 700; }
 
 p { font-family: 'PT Serif', serif; font-weight: 575; }
 

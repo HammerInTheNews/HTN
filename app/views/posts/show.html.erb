@@ -6,17 +6,20 @@
 
 			    <p><%= raw @post.body %></p>
 		    	<p>
+		    		<div class="subheadline">Share with friends and foes:</div>
+					<!-- AddThis Button BEGIN -->
+					<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-515349ac1e714aaf"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515349ac1e714aaf"></script>
+					<!-- AddThis Button END -->
+
 		    	  <h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></h2>
 		    	</p>			    
 			    <h2 class="headline">Comments</h2>
 			    <div id ="disqus_thread">
 					<%= disqus_thread.html_safe %>
 				</div>
-			    <%= render @post.comments  %>
-		    	<%= render 'comments/form',
-		    				comment: @post.comments.build,
-		    				post: @post %>
-
+			    <span class='st_twitterfollow' displayText='Twitter Follow' st_username='HammerInTheNews'></span>
 			    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
 			    <%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
 			    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
