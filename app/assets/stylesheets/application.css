@@ -38,6 +38,12 @@ hr {
     width: 60px;
 }
 
+.posts {
+    padding: 5px;
+    margin-bottom: 20px;
+
+}
+
 .preview img {
 	width: 2px;
 }
@@ -49,9 +55,17 @@ hr {
     height: 36px;
 }
 
+img.floatLeft { 
+    float: left; 
+    margin: 4px; 
+}
+
 footer { 
-	border-top: 1px solid #000;
+	
     height: 120px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
 
 
 
@@ -64,8 +78,11 @@ footer {
 #center_footer{
     background:#000;
     height: 130px;
-    width: 980px;
+    width: 100%;
     margin:0 auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     }
 #left_footer,#right_footer {
     width:450px;

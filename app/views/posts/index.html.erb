@@ -4,10 +4,12 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <!-- This is the main header section -->
-        <div class="span8 posts">
-          <div class="row-fluid">
+        <div class="span7">
+          <div class="row-fluid posts">
             <% post = @posts.shift %>
+
             <h1 class="headline"><%= link_to post.title, post %></h1>
+            <img src="http://placehold.it/714x250>">
             <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
             <p>
@@ -28,17 +30,22 @@
             <% end %>
               <!--This is the main post section-->
               <div class="span6">
-                <h2 class="headline"><%= link_to post.title, post %></h2>
-                <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
+                <div class="posts">
+                  <h2 class="headline"><%= link_to post.title, post %></h2>
+                  <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
-                <p>
-                  <%= raw truncate post.body, length: 300 %>
-                  <%= link_to "read more", post %> |||
-                  <%= link_to "Leave a comment",
-                     post_path(  post, :anchor => "disqus_thread"),
-                    :"data-disqus-identifer" =>   post.id %>
-                  
-                </p>
+                  <p>
+                    
+                    <img src="http://placehold.it/70x70" class="floatLeft">
+                    
+                    <%= raw truncate post.body, length: 300 %>
+                    <%= link_to "read more", post %> |||
+                    <%= link_to "Leave a comment",
+                       post_path(  post, :anchor => "disqus_thread"),
+                      :"data-disqus-identifer" =>   post.id %>
+                    
+                  </p>
+                </div>  
               </div> 
             <% if i % 2 == 1 %>
               </div>
@@ -46,7 +53,7 @@
           <% end %>
         </div>  
         <!--The Widget Section --> 
-        <div class="span4 widgets">
+        <div class="span5 widgets">
           <h2 class="headline">Money-making Ads</h2>
           <p><img src="http://placehold.it/350x300"></p>
         </div>
