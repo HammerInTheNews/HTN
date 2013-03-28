@@ -1,20 +1,21 @@
 
-    <h2 class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></h2>
-    <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_floating_style addthis_16x16_style">
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_twitter"></a>
-<a class="addthis_button_linkedin"></a>
-<a class="addthis_button_google_plusone_share"></a>
-<a class="addthis_button_compact"></a>
-</div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
-<!-- AddThis Button END -->
+
+              <!-- AddThis Button BEGIN -->
+          <div class="addthis_toolbox addthis_floating_style addthis_16x16_style">
+          <a class="addthis_button_facebook"></a>
+          <a class="addthis_button_twitter"></a>
+          <a class="addthis_button_linkedin"></a>
+          <a class="addthis_button_google_plusone_share"></a>
+          <a class="addthis_button_compact"></a>
+          </div>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+          <!-- AddThis Button END -->
+  <div class="box-around-all-articles">
     <div class="container-fluid">
       <div class="row-fluid">
         <!-- This is the main header section -->
         <div class="span7">
-          <div class="row-fluid posts">
+          <div class="row-fluid">
             <% post = @posts.shift %>
 
             <h1 class="headline"><%= link_to post.title, post %></h1>
@@ -66,11 +67,12 @@
         <div class="span5 widgets">
           <h1 class="headline">Money-making Ads</h1>
           <p><img src="http://placehold.it/350x300"></p>
-          
+          <p class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></p>
 
         </div>
       </div> 
     </div>
+  </div>  
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'hammerinthenewscomments'; // required: replace example with your forum shortname
