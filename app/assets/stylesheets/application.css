@@ -37,11 +37,22 @@ hr {
     margin: 12px auto 8px;
     width: 60px;
 }
+.container-fluid {
+    margin-right: 10%;
+    margin-left:  10%; 
+}
 
 .posts {
-    padding: 5px;
-    margin-bottom: 20px;
 
+    border-top-width: 4px;
+    
+    border-top-style: double;
+    
+    border-top-color: gray;
+    
+
+    padding: 8px 0px;
+    }
 }
 
 .preview img {
