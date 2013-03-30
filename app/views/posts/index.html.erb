@@ -10,38 +10,41 @@
           </div>
           <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
           <!-- AddThis Button END -->
-  <div class="box-around-all-articles">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <!-- This is the main header section -->
-        <div class="span7">
-          <div class="row-fluid">
-            <% post = @posts.shift %>
+  
+    <div class="container box-around-all-articles">
+      
+    <div class="row">
+        <!-- This is the main story section -->
+        <div class="span8 wide-column main-posts">
+          
+           <div class="top-post">
+       
+              <% post = @posts.shift %>
 
-            <h1 class="headline"><%= link_to post.title, post %></h1>
-            <img src="http://placehold.it/714x250>">
-            <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
+              <h1 class="headline"><%= link_to post.title, post %></h1>
+              <img src="http://placehold.it/714x250>">
+              <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
-            <p>
-              <%= raw truncate post.body, length: 1900 %>
-              <%= link_to "read more", post %>
-               |||
-                  <%= link_to "Leave a comment",
-                     post_path(  post, :anchor => "disqus_thread"),
-                    :"data-disqus-identifer" =>   post.id %>
-            </p>
+              <p>
+                <%= raw truncate post.body, length: 1900 %>
+                <%= link_to "read more", post %>
+                 |||
+                    <%= link_to "Leave a comment",
+                       post_path(  post, :anchor => "disqus_thread"),
+                      :"data-disqus-identifer" =>   post.id %>
+              </p>
 
-          </div>
+            </div>
 
-
+         <div class="other-posts">
           <!--This iterates through the posts -->
           <% @posts.each_with_index do |post, i| %>
             <% if i % 2 == 0 %>
-              <div class="row-fluid">
+              <div class="row">
             <% end %>
-              <!--This is the main post section-->
-              <div class="span6">
-                <div class="posts">
+              <!--This is the smaller post section-->
+              <div class="span4 small-post">
+                <div class="post">
                   <h2 class="headline"><%= link_to post.title, post %></h2>
                   <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
@@ -62,17 +65,21 @@
               </div>
             <% end %> 
           <% end %>
-        </div>  
-        <!--The Widget Section --> 
-        <div class="span5 widgets">
+        </div>
+        </div>
+         <!--The Widget Section -->  
+
+        <div class="span4 widgets">
           <h1 class="headline">Money-making Ads</h1>
           <p><img src="http://placehold.it/350x300"></p>
           <p class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></p>
 
         </div>
-      </div> 
+
+      
     </div>
-  </div>  
+    </div>
+    
     <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'hammerinthenewscomments'; // required: replace example with your forum shortname
