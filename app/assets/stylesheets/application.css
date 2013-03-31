@@ -109,7 +109,17 @@ hr {
 
 img.floatLeft { 
     float: left; 
-    margin: 4px; 
+    margin: 4px;
+    border: 1px solid #bdbdbd;
+    padding: 2px;
+    background-color: #EFEECB;
+}
+
+.headline-photo {
+    border: 1px solid #bdbdbd;
+    padding: 2px;
+    background-color: #EFEECB;
+ 
 }
 
 footer { 

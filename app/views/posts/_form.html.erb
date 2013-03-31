@@ -1,5 +1,5 @@
 <div class="field">
-  <%= form_for @post do |form| %>
+  <%= form_for @post, html: {multipart: true} do |form| %>
     
     <% if @post.errors.any? %>
       <h2>Something is messed up here!</h2>
@@ -12,6 +12,10 @@
       <%= form.label :title %>
       <%= form.text_field :title %>
     </div>
+
+    <div>
+      <%= form.file_field :image %>
+    <div>
 
 
 <!--     <div>
