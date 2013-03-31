@@ -4,7 +4,7 @@
 		    <!--Body content-->
 		    <h2 class="headline"><%= @post.title %></h2>
 
-			    <p><%= raw @post.body %></p>
+			    <p><%= @post.body.html_safe %></p>
 		    	<p>
 		    		<div class="subheadline">Share with friends and foes:</div>
 						<!-- Lockerz Share BEGIN -->

@@ -11,6 +11,9 @@ gem 'ckeditor'
 gem "paperclip", "~> 3.0"
 gem "disqus"
 gem 'aws-sdk'
+gem 'tinymce-rails' #better than rails?
+gem 'jquery-rails'
+gem 'ckeditor_rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 #changed production for heroku
@@ -37,8 +40,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'ckeditor_rails'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
