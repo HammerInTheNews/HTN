@@ -50,9 +50,9 @@
 
                   <p>
                     
-                    <img src="http://www.fillmurray.com/70/70" class="floatLeft">
+                    <div class="floatLeft"><%= image_tag post.image.url(:thumb) %></div> 
                     
-                    <%= raw truncate post.body, length: 300 %>
+                    <%= raw truncate post.body, length: 150 %>
                     <%= link_to "read more", post %> |||
                     <%= link_to "Leave a comment",
                        post_path(  post, :anchor => "disqus_thread"),

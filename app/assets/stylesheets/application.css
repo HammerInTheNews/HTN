@@ -107,7 +107,7 @@ hr {
     height: 36px;
 }
 
-img.floatLeft { 
+.floatLeft { 
     float: left; 
     margin: 4px;
     border: 1px solid #bdbdbd;
