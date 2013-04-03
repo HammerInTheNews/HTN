@@ -6,7 +6,7 @@
 
 			    <p><%= @post.body.html_safe %></p>
 			    
-			    <p><%= image_tag @post.image.url %></p>
+			    <p><%= image_tag @post.image.url.to_s %></p>
 		    	<p>
 		    		<div class="subheadline">Share with friends and foes:</div>
 						<!-- Lockerz Share BEGIN -->
