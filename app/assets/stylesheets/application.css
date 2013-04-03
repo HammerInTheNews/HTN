@@ -27,7 +27,9 @@ h2.headline a { color: black;}
 
 p { font-family: 'PT Serif', serif; font-weight: 575; }
 
-div.ellipsis { }
+div.span8.wide-column.main-posts {
+
+ }
 
 hr {
     font-family: 'PT Sans Narrow', sans-serif; 
@@ -46,13 +48,7 @@ hr {
 
 
 
-    -moz-box-shadow: 2px 1px 2px #000000;
-    -webkit-box-shadow: 2px 1px 2px #000000;
-    box-shadow: 2px 1px 2px #000000;
-
-
-
-    border:solid 1px #b0a7b0;
+    border:solid 2.5px #b0a7b0;
     -moz-border-radius-topleft: 0px;
     -moz-border-radius-topright:3px;
     -moz-border-radius-bottomleft:3px;

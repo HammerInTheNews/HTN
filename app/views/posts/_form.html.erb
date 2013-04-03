@@ -19,15 +19,9 @@
       <%= form.file_field :image %>
     <div>
 
-
-<!--     <div>
-      <%= form.label :body %>
-      <%= form.text_area :body, :class => 'ckeditor' %>
-    </div> -->
-
     <div>
       <%= form.label :body %>
-      <%= form.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
+      <%= text_area_tag :editor, "", :class => "tinymce", :rows => 40, :cols => 200 %>
     </div>
 
    <hr>

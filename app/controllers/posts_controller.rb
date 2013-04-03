@@ -10,6 +10,11 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  else	
 	    @posts = Post.includes(:comments).order("created_at DESC")
 	  end
+	  #This enables atom feeds
+	  respond_to do |format|
+        format.html
+        format.atom
+      end
 	end
 
 	#for you to see new posts, need a new action
