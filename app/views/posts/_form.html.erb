@@ -21,7 +21,7 @@
 
     <div>
       <%= form.label :body %>
-      <%= text_area_tag :editor, "", :class => "tinymce", :rows => 40, :cols => 200 %>
+      <%= form.bootsy_area :body %>
     </div>
 
    <hr>
@@ -37,5 +37,5 @@
    
    
   <% end %>
-<%= tinymce %>
+
 </div>

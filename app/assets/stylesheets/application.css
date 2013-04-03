@@ -10,7 +10,8 @@
  *
  *= require_self
  *= require_tree .
- */
+ *= require bootsy
+*/
 body { padding-top: 60px;
        background: url(/HTN/app/assets/images/sneaker_mesh_fabric.png) repeat 0 0;
 }

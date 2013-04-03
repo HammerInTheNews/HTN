@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  include Bootsy::Container
 
   attr_accessible :body, :title, :tag_list, :image
   acts_as_taggable
@@ -11,5 +12,5 @@ class Post < ActiveRecord::Base
   belongs_to :user
   has_attached_file :image, styles: { thumb: '70x60#', small: '150x150>', large: '680x340', ugly: '666x666!' },
                      size: { :in => 0..1000.kilobytes }
-                                        
+  mount_uploader :image, ImageUploader                                     
 end

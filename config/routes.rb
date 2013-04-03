@@ -1,4 +1,6 @@
 HTN::Application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

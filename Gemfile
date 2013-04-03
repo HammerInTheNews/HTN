@@ -11,8 +11,9 @@ gem "paperclip", "~> 3.0"
 gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
-gem 'tinymce-rails'
-
+gem 'carrierwave'
+gem 'bootsy'
+gem "mini_magick"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
