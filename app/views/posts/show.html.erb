@@ -1,60 +1,63 @@
     <div class="container">
 	    <div class="row">
-		    <div class="span6">
+		  <div class="span6">
 		    <!--Body content-->
 		    <h2 class="headline"><%= @post.title %></h2>
 
 			    <p><%= @post.body.html_safe %></p>
 			    
 			    <p><%= image_tag @post.image.url.to_s %></p>
-		    	<p>
-		    		<div class="subheadline">Share with friends and foes:</div>
+		    	
+	    		<div class="subheadline">Share with friends and foes:</div>
 						<!-- Lockerz Share BEGIN -->
 						<div class="a2a_kit a2a_default_style">
 						<a class="a2a_dd" href="http://www.addtoany.com/share_save">Share</a>
 						<span class="a2a_divider"></span>
 						<a class="a2a_button_facebook"></a>
 						<a class="a2a_button_twitter"></a>
-						<a class="a2a_button_google_plus"></a>
 						<a class="a2a_button_reddit"></a>
 						</div>
 						<script type="text/javascript">
 						var a2a_config = a2a_config || {};
 						a2a_config.onclick = 1;
-						a2a_config.num_services = 22;
-						a2a_config.color_main = "d8dcdf";
-						a2a_config.color_border = "dcdee0";
-						a2a_config.color_link_text = "333333";
-						a2a_config.color_link_text_hover = "333333";
-						a2a_config.color_bg = "fcfdfd";
 						</script>
 						<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
-						<!-- Lockerz Share END -->	
+						<!-- Lockerz Share END -->
 
-		    	  <h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></h2>
-		    	</p>			    
+		    	<h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+		    				    
 			    <h2 class="headline">Comments</h2>
+			    
 			    <div id ="disqus_thread">
 					<%= disqus_thread.html_safe %>
-				</div>
-			    <span class='st_twitterfollow' displayText='Twitter Follow' st_username='HammerInTheNews'></span>
+				</div><!--disqus comments-->
+
 			    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
 			    <%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
 			    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
-		    </div>
-		    <div class="span4">
+		  </div><!--left column - main post-->
+		    
+		    <div class="span4 sidebar">
 		    <!--Sidebar content-->
+		    
+		    <h2 class="headline">Related Articles</h2>
+			
+			<% @posts.each do |post| %>
+              <div class="floatLeft"><img src=" http://placecage.com/70/70"> </div>
+              <h6 class="headline"><%= link_to post.title, post %></h6>
+              <p><%= raw truncate post.body, length: 75 %>
+                 <%= link_to "Comment?",
+                       post_path(  post, :anchor => "disqus_thread"),
+                      :"data-disqus-identifer" =>   post.id %></p>
+                      <hr>
+            <% end %>
 
-		    	<h2 class="headline">Related Articles</h2>
-		    	<h2 class="headline"><%= @random_post %></h2>
-
-		    	<p><img src="http://placehold.it/350x300"></p>
-		    	<p><img src="http://placehold.it/350x150"></p>
 		    	<div class='spread'>
   
-		    </div>
-	    </div>
-    </div>
+		    	</div><!--spread - not sure what this is doing here-->
+	    	</div><!--sidebar-->
+        </div> <!--row-->
+    </div><!--container-->
 
 	
 

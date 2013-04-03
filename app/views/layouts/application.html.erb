@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
   <title>HTN</title>
   
 	  <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -18,11 +19,6 @@
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "8650f913-025e-4ba2-9c88-d4459db29c1f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     
-    <script src="/ckeditor/ckeditor.js"></script>
-    <script>var editor_data = CKEDITOR.replace( 'editor1', {
-            toolbar: 'Basic',
-            uiColor: '#9AB8F3'
-          });</script>
     <script type="text/javascript">var disqus_developer = 1; // this would set it to developer mode</script>  
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 
@@ -73,13 +69,8 @@
     </div>
 
     <div class="containter">
-       <p><% if user_signed_in? %>
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Sign In", new_user_session_path %>
-          <% end %>
-       </p>
-      <!-- Main hero unit for a primary marketing message or call to action -->
+
+      
       <%= yield %>
 
      <div id="footer-spacer"></div>
@@ -94,6 +85,12 @@
      <li> <a href="#"> <img src="images/youtube.png"  /> </a> </li>
      <li> <a href="#">     <img src="images/rss.png"  />     </a> </li>
      </ul>
+            <p><% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path %>
+          <% end %>
+       </p>
    </div> 
       
    <div id="right_footer">

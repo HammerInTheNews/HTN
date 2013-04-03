@@ -14,6 +14,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  respond_to do |format|
         format.html
         format.atom
+        format.rss { render :layout => false } #index.rss.builder
       end
 	end
 
@@ -36,8 +37,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 
 	def show
 		@post = Post.find(params[:id])
-		@posts = Post.includes(:comments).order("created_at DESC")
-		@random_posts = Post.find(params[:id]) #didn't get it going yet
+		@posts = Post.includes(:comments).order("created_at DESC").limit(5)
 	end
 
 	def edit

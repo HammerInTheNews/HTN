@@ -14,6 +14,7 @@
 */
 body { padding-top: 60px;
        background: url(/HTN/app/assets/images/sneaker_mesh_fabric.png) repeat 0 0;
+       font-family: 'PT Serif', serif; font-weight: 575
 }
 
 h1.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
@@ -24,7 +25,8 @@ h2.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1p
 
 h1.headline a { color: black;} 
 h2.headline a { color: black;} 
-.subheadline { font-family: 'PT Sans', sans-serif; font-weight: 700; }
+.subheadline { font-family: 'PT Sans', sans-serif; font-weight: 900; color: black;}
+
 
 p { font-family: 'PT Serif', serif; font-weight: 575; }
 
@@ -32,14 +34,7 @@ div.span8.wide-column.main-posts {
 
  }
 
-hr {
-    font-family: 'PT Sans Narrow', sans-serif; 
-    background: none repeat scroll 0% 0% rgb(51, 51, 51);
-    border: 5px none;
-    height: 2px;
-    margin: 12px auto 8px;
-    width: 60px;
-}
+
 .container-fluid {
     margin-right: 10%;
     margin-left:  10%; 

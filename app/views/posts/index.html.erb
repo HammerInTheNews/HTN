@@ -22,7 +22,7 @@
               <% post = @posts.shift %>
 
               <h1 class="headline"><%= link_to post.title, post %></h1>
-              <img src="http://placehold.it/700x360>" class="headline-photo">
+              <img src=" http://placecage.com/700/360"> class="headline-photo">
               <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
               <p>
@@ -50,9 +50,9 @@
 
                   <p>
                     
-                    <div class="floatLeft"></div> 
+                    <div class="floatLeft"><img src=" http://placecage.com/70/70"> </div> 
                     
-                    <%= raw truncate post.body, length: 150 %>
+                    <p><%= raw truncate post.body, length: 150 %></p>
                     <%= link_to "read more", post %> |||
                     <%= link_to "Leave a comment",
                        post_path(  post, :anchor => "disqus_thread"),
@@ -76,7 +76,7 @@
 
         </div>
 
-      
+      <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
     </div>
     </div>
     
