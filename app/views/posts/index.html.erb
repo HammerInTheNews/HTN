@@ -22,7 +22,7 @@
               <% post = @posts.shift %>
 
               <h1 class="headline"><%= link_to post.title, post %></h1>
-              <img src=" http://placecage.com/700/360"> class="headline-photo">
+              <img class="headline-photo" src=" http://placecage.com/700/360"> 
               <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
               <p>
@@ -45,7 +45,7 @@
               <!--This is the smaller post section-->
               <div class="span4 small-post">
                 <div class="post">
-                  <h2 class="headline"><%= link_to post.title, post %></h2>
+                  <h2 class="headline smaller-font"><%= link_to post.title, post %></h2>
                   <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
                   <p>

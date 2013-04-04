@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
-  <title>HTN</title>
   
-	  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>HTN</title>
+    <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
+	  <%= stylesheet_link_tag "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
 	  <%= csrf_meta_tags %>
     

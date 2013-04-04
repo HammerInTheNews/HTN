@@ -11,11 +11,11 @@ before_filter :authenticate_user!, except: [:index, :show]
 	    @posts = Post.includes(:comments).order("created_at DESC")
 	  end
 	  #This enables atom feeds
-	  respond_to do |format|
-        format.html
-        format.atom
-        format.rss { render :layout => false } #index.rss.builder
-      end
+	  # respond_to do |format|
+   #      format.html
+   #      format.atom
+   #      format.rss { render :layout => false } #index.rss.builder
+   #    end
 	end
 
 	#for you to see new posts, need a new action
