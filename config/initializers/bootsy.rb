@@ -13,17 +13,17 @@ Bootsy.setup do |config|
   }
 
   # Image versions available
-  # Possible values: :small, :medium, :large and/or :original
-  # config.image_versions_available = [:small, :medium, :large, :original]
+  Possible values: :small, :medium, :large and/or :original
+  config.image_versions_available = [:small, :medium, :large, :original]
 
 
   # SMALL IMAGES
 
   # Width limit for small images
-  config.small_image[:width] = 60
+  config.small_image[:width] = 80
 
   # Height limit for small images
-  config.small_image[:height] = 60
+  config.small_image[:height] = 80
 
 
   # MEDIUM IMAGES

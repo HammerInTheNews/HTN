@@ -6,7 +6,7 @@
 
 			    <p><%= @post.body.html_safe %></p>
 			    
-			    <p><%= image_tag @post.image.url.to_s %></p>
+			    <!-- <p><%#= image_tag @post.image.url.to_s %></p> -->
 		    	
 	    		<div class="subheadline">Share with friends and foes:</div>
 						<!-- Lockerz Share BEGIN -->
@@ -37,7 +37,7 @@
 			    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
 		  </div><!--left column - main post-->
 		    
-		    <div class="span4 sidebar">
+		    <div class="span4 show-sidebar">
 		    <!--Sidebar content-->
 		    
 		    <h2 class="headline">Related Articles</h2>

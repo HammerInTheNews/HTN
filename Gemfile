@@ -11,9 +11,9 @@ gem "paperclip", "~> 3.0"
 gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
-gem 'carrierwave'
+
 gem 'bootsy'
-gem "mini_magick"
+
 gem "fog", "~> 1.3.1"
 
 # Bundle edge Rails instead:

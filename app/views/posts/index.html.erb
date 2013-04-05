@@ -22,11 +22,10 @@
               <% post = @posts.shift %>
 
               <h1 class="headline"><%= link_to post.title, post %></h1>
-              <img class="headline-photo" src=" http://placecage.com/700/360"> 
               <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
               <p>
-                <%= raw truncate post.body, length: 500 %>
+                <%= raw post.body %>
                 <%= link_to "read more", post %>
                  |||
                     <%= link_to "Leave a comment",
@@ -50,9 +49,9 @@
 
                   <p>
                     
-                    <div class="floatLeft"><img src=" http://placecage.com/70/70"> </div> 
+                    <div class="floatLeft"><%= image_tag post.bootsy_image_gallery.images.first.image_file.small.url if post.bootsy_image_gallery %> </div> 
                     
-                    <p><%= raw truncate post.body, length: 150 %></p>
+                    <p><%= raw post.body %></p>
                     <%= link_to "read more", post %> |||
                     <%= link_to "Leave a comment",
                        post_path(  post, :anchor => "disqus_thread"),

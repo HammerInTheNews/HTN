@@ -16,13 +16,8 @@
     </div>
 
     <div>
-      <h2 class='headline'>Upload an image</h2>
-      <%= form.file_field :image %>
-    <div>
-
-    <div>
       <%= form.label :body %>
-      <%= form.bootsy_area :body %>
+      <%= form.bootsy_area :body, :html => {width: 500} %>
     </div>
 
    <hr>
