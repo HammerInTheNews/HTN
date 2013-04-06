@@ -13,7 +13,7 @@ Bootsy.setup do |config|
   }
 
   # Image versions available
-  Possible values: :small, :medium, :large and/or :original
+  #Possible values: :small, :medium, :large and/or :original
   config.image_versions_available = [:small, :medium, :large, :original]
 
 
