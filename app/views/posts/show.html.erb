@@ -6,8 +6,7 @@
 
 			    <p><%= @post.body.html_safe %></p>
 			    
-			    <!-- <p><%#= image_tag @post.image.url.to_s %></p> -->
-		    	
+		<%= image_tag @post.image.url(:thumb) %>		    	
 	    		<div class="subheadline">Share with friends and foes:</div>
 						<!-- Lockerz Share BEGIN -->
 						<div class="a2a_kit a2a_default_style">
