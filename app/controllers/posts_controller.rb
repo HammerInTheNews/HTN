@@ -29,7 +29,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 		#if post is valid - go to index
 	  	if @post.save
 	  		#back to the index for you
-	  		redirect_to post_path
+	  		redirect_to posts_path
 	  	else
 	  		render :new #gives you the new view
 	  	end

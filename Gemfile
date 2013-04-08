@@ -12,6 +12,7 @@ gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'truncate_html'
+gem 'ckeditor_rails'
 
 #gem "fog", "~> 1.3.1"
 
