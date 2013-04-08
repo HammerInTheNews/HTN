@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  include Bootsy::Container
+  
 
   attr_accessible :body, :title, :tag_list, :image
   acts_as_taggable

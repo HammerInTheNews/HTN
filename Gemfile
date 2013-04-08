@@ -12,7 +12,6 @@ gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'truncate_html'
-gem 'bootsy'
 
 #gem "fog", "~> 1.3.1"
 
