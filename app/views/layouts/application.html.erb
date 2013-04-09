@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+  <%= favicon_link_tag 'favicon.ico?1' %>
   <title>HTN</title>
     <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
 	  <%= stylesheet_link_tag "application", :media => "all" %>
@@ -26,74 +26,68 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]--> 
 </head>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      
-      <div class="navbar-inner">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
         <header class="banner">
           <%= image_tag("skyline_thicker_HTN.jpg", :alt => "skyline_thicker_HTN") %>
         </header>
+    </div><!-- span12 -->
+  </div><!-- row -->
+</div><!-- container -->
+
+    <div class="navbar">
+      <div class="navbar-inner">
         <div class="container">
 
-         
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="/posts">HammerInTheNews</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="/users">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
-                <ul class="dropdown-menu">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </a>
+        </button>
+              <a class="brand" href="/posts">Hammer In The News</a>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li><a class="active" "/posts">Home</a></li>
+                  <li><a href="#">Link</a></li>
                   <li><%= link_to "New Post", new_post_path %></li>
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  
                 </ul>
-              </li>
-            </ul>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+                <form class="navbar-form pull-right">
+                  <input type="text" class="span2">
+                  <button type="submit" class="btn">Submit</button>
+                </form>
+              </div><!-- nav-collapse collapse -->
 
-    <div class="content">
+        </div><!--containter-->
+      </div><!--navbar-inner-->
+    </div><!--navbar-->
 
-      
+<div class="content">
+ 
       <%= yield %>
 
-     <div id="footer-spacer"></div>
-<div id="footer">
+   <div id="footer-spacer"></div>
+   <div id="footer">
 
- <div id="center_footer">
+   <div id="center_footer">
 
    <div id="left_footer"><b>Find Us On</b>
-   <ul>
-     <li> <a href="#"><img src="images/facebook.png"  /></a> </li>
-     <li> <a href="#">  <img src="images/twitter.png"  />  </a> </li>
-     <li> <a href="#"> <img src="images/youtube.png"  /> </a> </li>
-     <li> <a href="#">     <img src="images/rss.png"  />     </a> </li>
+     <ul>
+       <li><a href="#"><img src="/images/iconmonstr-facebook-5-icon.png"  /></a></li>
+       <li><a href="#"><img src="/images/iconmonstr-twitter-5-icon.png"  /></a></li>
+       <li><a href="#"><img src="/images/iconmonstr-google-plus-5-icon.png"/></a> </li>
+       
      </ul>
-            <p><% if user_signed_in? %>
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-          <% else %>
-            <%= link_to "Sign In", new_user_session_path %>
-          <% end %>
-       </p>
-   </div> 
+     <p><% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+        <% end %>
+     </p>
+   </div><!--left-footer-->
       
    <div id="right_footer">
     <div class="span3 well">
@@ -115,8 +109,7 @@
    
  </div> 
 </div> 
-
-    </div> <!-- /container -->
+</div> <!-- /content -->
 
     <!-- Le javascript
     ================================================== -->
