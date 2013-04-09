@@ -10,6 +10,6 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :images
   belongs_to :user
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "80x80>" }, :default_url => "/images/:style/missing.png"                                  
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "80x80>" }, :large => "300x300>", :default_url => "/images/:style/missing.png"                                  
 
 end

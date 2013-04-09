@@ -7,12 +7,13 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
-gem "paperclip", "~> 3.0"
+gem "paperclip", "~> 3.0.4"
 gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'truncate_html'
 gem 'ckeditor_rails'
+gem "cocaine", "= 0.3.2"
 
 #gem "fog", "~> 1.3.1"
 

@@ -22,11 +22,13 @@
      
         <% post = @posts.shift %>
 
+
         <h1 class="headline"><%= link_to post.title, post %></h1>
+        <%= image_tag post.image.url(:large) %>
         <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
         <p>
-          <%= raw post.body %>
+          <div class="image-remove"><%= raw post.body %></div>
           <%= link_to "read more", post %>
            |||
               <%= link_to "Leave a comment",
@@ -50,11 +52,12 @@
             <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
               
             <div class="floatLeft"><%= image_tag post.image.url(:thumb) %></div>
-            <p><%= raw truncate_html(post.body, length: 70) %>
+            
+            <div class="image-remove"><%= raw truncate_html(post.body, length: 70) %>
             <%= link_to "read more", post %> |||
             <%= link_to "Leave a comment",
                post_path(  post, :anchor => "disqus_thread"),
-              :"data-disqus-identifer" =>   post.id %></p>
+              :"data-disqus-identifer" =>   post.id %></div>
               
           </div>  
         </div> 
