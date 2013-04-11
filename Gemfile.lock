@@ -182,6 +182,7 @@ GEM
     uuidtools (2.1.3)
     warden (1.1.1)
       rack (>= 1.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -192,7 +193,6 @@ DEPENDENCIES
   acts-as-taggable-on
   aws-sdk
   ckeditor_rails
-  cocaine (= 0.3.2)
   coffee-rails (~> 3.2.1)
   devise
   disqus
@@ -201,10 +201,11 @@ DEPENDENCIES
   meta_search (>= 1.1.0.pre)
   omniauth
   omniauth-twitter
-  paperclip (~> 3.0.4)
+  paperclip (~> 3.0)
   pg
   rails (= 3.2.12)
   sass-rails (~> 3.2.3)
   sqlite3
   truncate_html
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0)

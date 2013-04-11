@@ -24,7 +24,7 @@
 
 
         <h1 class="headline"><%= link_to post.title, post %></h1>
-        <%= image_tag post.image.url(:large) %>
+        <%= link_to (image_tag post.image.url(:large)), post_path(post) %>
         <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
         <p>
@@ -51,7 +51,7 @@
             <h2 class="headline smaller-font"><%= link_to post.title, post %></h2>
             <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
               
-            <div class="floatLeft"><%= image_tag post.image.url(:thumb) %></div>
+            <div class="floatLeft"><%= link_to (image_tag post.image.url(:thumb)), post_path(post) %></div>
             
             <div class="image-remove"><%= raw truncate_html(post.body, length: 70) %>
             <%= link_to "read more", post %> |||
@@ -70,6 +70,8 @@
     <h1 class="headline">Money-making Ads</h1>
     <p><img src="http://placehold.it/350x300"></p>
     <p class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></p>
+    <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/hypes-images/assets/scripts/tintembed.js"></script>        <div class="tintup-holder" style="-webkit-overflow-scrolling:touch;overflow:auto;position:relative;height:380px;width:300px;">        <iframe class="tintup" src="http://www.tintup.com/hammerinthenews?embed=true&height=350&width=300&cols=3" style="height:350px;width:300px;border:none;"></iframe><a href="http://www.tintup.com/blog/the-best-twitter-widget" style="width:118px;            height:31px;            background-image:url(https://s3-us-west-1.amazonaws.com/hypes-images/assets/logos/poweredbytintsmall.png);            position:absolute;            bottom:30px;            right: 10px;            text-indent: -9999px;            z-index:9;">twitter widget</a></div>
+
   </div>
 
   <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>

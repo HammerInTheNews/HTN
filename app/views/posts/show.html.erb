@@ -45,7 +45,7 @@
 			  <div class="related-articles">
 				<div class="related-article-box">
 				<% @posts.each do |post| %>
-	            <div class="floatLeft"><%= image_tag post.image.url(:thumb) %></div>
+	            <div class="floatLeft"><%= link_to (image_tag post.image.url(:thumb)), post_path(post) %></div>
 	            <h2 class="headline smaller-font"><%= link_to post.title, post %></h2>
 	            <div class="image-remove"><%= raw truncate_html(post.body, length: 70) %>
 	               <%= link_to "Comment?",
