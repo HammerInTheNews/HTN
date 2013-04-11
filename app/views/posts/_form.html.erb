@@ -4,10 +4,15 @@
   <%= form_for @post, html: {multipart: true} do |form| %>
     
     <% if @post.errors.any? %>
-      <h2>Something is messed up here!</h2>
+      <div class="alert alert-block">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4>Error!</h4>
+      We've got our top people working furiously on this...wait, it was your fault.
+      
       <% @post.errors.full_messages.each do |error| %>
-        <p style="color:red"><%=error %></p>
+        <%=error %>
       <% end %>
+      </div>
     <% end %>
 
     <div>
