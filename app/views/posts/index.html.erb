@@ -67,12 +67,20 @@
        <!--The Widget Section -->  
 
   <div class="span4 widgets">
-    <h1 class="headline">Money-making Ads</h1>
+    <h2 class="headline">Money-making Ads</h2>
     <p><img src="http://placehold.it/350x300"></p>
     <p class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></p>
-    <h1 class="headline">Money-making Ads</h1>
+    
+    <h2 class="headline">Forge A Bond</h2>
+    <div class="fb-like-box" data-href="http://www.facebook.com/HammerInTheNews" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+
+    <h2 class="headline">Money-making Ads</h2>
     <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/hypes-images/assets/scripts/tintembed.js"></script>        <div class="tintup-holder" style="-webkit-overflow-scrolling:touch;overflow:auto;position:relative;height:380px;width:300px;">        <iframe class="tintup" src="http://www.tintup.com/hammerinthenews?embed=true&height=350&width=300&cols=3" style="height:350px;width:300px;border:none;"></iframe><a href="http://www.tintup.com" style="width:118px;            height:31px;            background-image:url(https://s3-us-west-1.amazonaws.com/hypes-images/assets/logos/poweredbytintsmall.png);            position:absolute;            bottom:30px;            right: 10px;            text-indent: -9999px;            z-index:9;">create social website</a></div>
-  </div>
+ 
+    
+ 
+
+</div>
 
   <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
 </div>
