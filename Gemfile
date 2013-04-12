@@ -7,13 +7,14 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'activeadmin'
 gem "meta_search",    '>= 1.1.0.pre'
-gem "paperclip", "~> 3.0"
+gem "paperclip"
 gem "disqus"
 gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'truncate_html'
 gem 'ckeditor_rails'
-gem 'will_paginate', '~> 3.0'
+
+gem "friendly_id", "~> 4.0.9" # Note: You MUST use 4.0.9 or greater for Rails 3.2.10+
 #gem "cocaine", "= 0.3.2"
 
 #gem "fog", "~> 1.3.1"

@@ -1,12 +1,13 @@
     <div class="container">
 	  <div class="row">
-		  <div class="span6 show">
+		  <div class="span6">
 		    <!--Body content-->
+		    <span class="show">
 		    <h2 class="headline"><%= @post.title %></h2>
 
 		    <p><%= @post.body.html_safe %></p>
 		    
-			<%= image_tag @post.image.url(:medium) %>		    	
+			<!--<%#= image_tag @post.image.url(:medium) %>-->		    	
     		
     		<div class="subheadline">Share with friends and foes:</div>
 			
@@ -36,11 +37,12 @@
 		    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
 		    <%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
 		    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
+			</span>
 		  </div><!--left column - main post-->
 		    
-		  <div class="span4 show-sidebar">
+		  <div class="span6">
 		    <!--Sidebar content-->
-		    
+		    <span class="show-sidebar">
 		      <h2 class="headline">Related Articles</h2>
 			  <div class="related-articles">
 				<div class="related-article-box">
@@ -56,9 +58,10 @@
 	            <% end %>
 	            </div><!--related article box--> 
 	          </div>
-
+	        
 		    	
     	  </div><!--sidebar-->
+    	  </span>
       </div> <!--row-->
     </div><!--container-->
 

@@ -1,5 +1,5 @@
 HTN::Application.routes.draw do
- 
+  root to: 'posts#index'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -16,7 +16,7 @@ HTN::Application.routes.draw do
   end
 
   
-  root to: 'posts#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

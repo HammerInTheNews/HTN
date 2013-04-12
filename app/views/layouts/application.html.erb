@@ -2,7 +2,7 @@
 <html>
 <head>
   <%= favicon_link_tag 'favicon.ico?1' %>
-  <title>HTN</title>
+  <title>Hammer In The News | Artifice is the New Steel</title>
     <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
 	  <%= stylesheet_link_tag "application", :media => "all" %>
 	  <%= javascript_include_tag "application" %>
@@ -37,14 +37,13 @@
 
 <div class="container">
   <div class="row">
+  <span class="header">
     <div class="span12">
         <header class="banner">
           <%= image_tag("skyline_thicker_HTN.jpg", :alt => "skyline_thicker_HTN") %>
         </header>
     </div><!-- span12 -->
   </div><!-- row -->
-</div><!-- container -->
-
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container">
@@ -72,6 +71,9 @@
         </div><!--containter-->
       </div><!--navbar-inner-->
     </div><!--navbar-->
+  </span>
+</div><!-- container -->
+
 
 <div class="content">
  
