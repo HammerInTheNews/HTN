@@ -6,9 +6,9 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  #this accesses all the posts from the model 'Post' and stores them in @post
 	  #the includes method ensures that comments will be loaded simultaneously with Posts
 	  if params[:tag]
-        @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag])
+        @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag]).page(params[:page]).per(8)
 	  else	
-	    @posts = Post.includes(:comments).order("created_at DESC")
+	    @posts = Post.includes(:comments).order("created_at DESC").page(params[:page]).per(8)
 	  end
 	  #This enables atom feeds
 	  # respond_to do |format|

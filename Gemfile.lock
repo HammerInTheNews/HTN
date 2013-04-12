@@ -202,6 +202,7 @@ DEPENDENCIES
   friendly_id (~> 4.0.9)
   google-webfonts
   jquery-rails
+  kaminari
   meta_search (>= 1.1.0.pre)
   omniauth
   omniauth-twitter

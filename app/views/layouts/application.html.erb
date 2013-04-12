@@ -34,7 +34,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
   </head>
-
+ 
 <div class="container">
   <div class="row">
   <span class="header">
@@ -72,14 +72,39 @@
       </div><!--navbar-inner-->
     </div><!--navbar-->
   </span>
+      
+
 </div><!-- container -->
 
 
 <div class="content">
- 
+
       <%= yield %>
 
    <div id="footer-spacer"></div>
+   <div class="pagination"><%= paginate @posts %></div>
+    <div class="pagination">
+          <ul>
+            <li>
+              <a href="#">Prev</a> 
+            </li>
+            <li>
+              <a href="#">1</a> 
+            </li>
+            <li>
+              <a href="#">2</a> 
+            </li>
+            <li>
+              <a href="#">3</a> 
+            </li>
+            <li>
+              <a href="#">4</a> 
+            </li>
+            <li>
+              <a href="#">Next</a> 
+            </li>
+          </ul>
+      </div>
    <div id="footer">
 
    <div id="center_footer">

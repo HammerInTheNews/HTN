@@ -67,6 +67,9 @@
        <!--The Widget Section -->  
 
   <div class="span4 widgets">
+       
+       
+
     <h2 class="headline">Money-making Ads</h2>
     <p><img src="http://placehold.it/350x300"></p>
     <p class="btn btn-large disabled"><%= link_to "New Post", new_post_path %></p>
@@ -81,7 +84,7 @@
  
 
 </div>
-
+ 
   <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
 </div>
   

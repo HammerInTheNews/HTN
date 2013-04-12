@@ -13,7 +13,7 @@ gem 'aws-sdk'
 gem 'jquery-rails'
 gem 'truncate_html'
 gem 'ckeditor_rails'
-
+gem 'kaminari'
 gem "friendly_id", "~> 4.0.9" # Note: You MUST use 4.0.9 or greater for Rails 3.2.10+
 #gem "cocaine", "= 0.3.2"
 
