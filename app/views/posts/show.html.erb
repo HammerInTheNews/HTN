@@ -39,14 +39,12 @@
 		    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
 			</span>
 		  </div><!--left column - main post-->
-		    
+		   
 		  <div class="span6">
 		    <!--Sidebar content-->
-		    <span class="show-sidebar">
+		      <div class="related-articles">
 		      <h2 class="headline">Related Articles</h2>
-			  <div class="related-articles">
-				<div class="related-article-box">
-				<% @posts.each do |post| %>
+			  	<% @posts.each do |post| %>
 	            <div class="floatLeft"><%= link_to (image_tag post.image.url(:thumb)), post_path(post) %></div>
 	            <h2 class="headline smaller-font"><%= link_to post.title, post %></h2>
 	            <div class="image-remove"><%= raw truncate_html(post.body, length: 70) %>
@@ -56,12 +54,12 @@
 	              <hr>
 	             
 	            <% end %>
-	            </div><!--related article box--> 
-	          </div>
+         
+	          </div><!--related articles box--> 
 	        
 		    	
     	  </div><!--sidebar-->
-    	  </span>
+    	  
       </div> <!--row-->
     </div><!--container-->
 
