@@ -84,7 +84,7 @@
  
 
 </div>
- 
+    <%= paginate @posts %>
   <%= content_for :head, auto_discovery_link_tag(:atom, posts_url(format: "atom")) %>
 </div>
   

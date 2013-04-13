@@ -5,7 +5,7 @@ gem 'acts-as-taggable-on'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'
-gem 'activeadmin'
+gem "activeadmin", git: "https://github.com/gregbell/active_admin"
 gem "meta_search",    '>= 1.1.0.pre'
 gem "paperclip"
 gem "disqus"

@@ -35,7 +35,7 @@
     }(document, 'script', 'facebook-jssdk'));</script>
   </head>
  
-<div class="container">
+<div class="container header">
   <div class="row">
   <span class="header">
     <div class="span12">
@@ -55,23 +55,23 @@
         <span class="icon-bar"></span>
         </a>
         </button>
-              <a class="brand" href="/posts">Hammer In The News</a>
+              <a class="brand ptsans" href="/posts">Hammer In The News</a>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                  <li><a class="active" "/posts">Home</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><%= link_to "New Post", new_post_path %></li>
+                  <li><a class="active ptsans" "/posts">Home</a></li>
+                  <li><a class="ptsans" href="#">Link</a></li>
+                  <li><%= link_to "New Post", new_post_path, :class => "ptsans" %></li>
                 </ul>
                 <form class="navbar-form pull-right">
                   <input type="text" class="span2">
                   <button type="submit" class="btn">Submit</button>
                 </form>
               </div><!-- nav-collapse collapse -->
-
+  </span>
         </div><!--containter-->
       </div><!--navbar-inner-->
     </div><!--navbar-->
-  </span>
+
       
 
 </div><!-- container -->
@@ -82,7 +82,8 @@
       <%= yield %>
 
    <div id="footer-spacer"></div>
-   <div class="pagination"><%= paginate @posts %></div>
+
+   <div class="pagination"></div>
     <div class="pagination">
           <ul>
             <li>
@@ -111,9 +112,9 @@
 
    <div id="left_footer"><b>Find Us On</b>
      <ul>
-       <li><%= image_tag("iconmonstr-facebook-5-icon.png", :alt => "facebook-5-icon") %></li>
-       <li><%= image_tag("iconmonstr-google-plus-5-icon.png", :alt => "google-plus-5-icon") %></li>
-       <li><%= image_tag("iconmonstr-twitter-5-icon.png", :alt => "twitter-5-icon.png") %></li>
+       <li><%= link_to (image_tag("iconmonstr-facebook-5-icon.png", :alt => "facebook-5-icon")),"https://www.facebook.com/hammerinthenews" %></li>
+       <li><%= link_to (image_tag("iconmonstr-google-plus-5-icon.png", :alt => "google-plus-5-icon")),"https://plus.google.com/u/1/104181851172664296773/posts" %></li>
+       <li><%= link_to (image_tag("iconmonstr-twitter-5-icon.png", :alt => "twitter-5-icon.png")),"https://www.twitter.com/hammerinthenews" %></li>
        
      </ul>
      <p><% if user_signed_in? %>
