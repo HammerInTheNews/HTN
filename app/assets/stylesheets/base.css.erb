@@ -2,25 +2,45 @@ body { padding-top: 40px;
        background-image: url(<%= asset_path 'satinweave.png' %>);
        font-family: 'PT Serif', serif; font-weight: 575
 }
-
+#left_footer ul li{
+    list-style-type: none;
+}
 .banner {
     margin: 0 auto; /* This is what centers it */
     max-width: 1000px;
     width: 99%;
 }
 div.navbar{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
     margin: 0;
+    border: 0px;
 }
+
+.navbar-inner{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-image: 0;
+    border: 0px;
+}
+
 div.container.header{
     box-shadow: 0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
     border-radius: 0px;
     background-image: none;
     margin-bottom: 2%;
     
 }
 
+div.post:hover{
+    background-color: #FFFFE0;
 
+
+}
 span.show{
     background-color:white;
     padding-left: 5%;
@@ -98,6 +118,7 @@ div.span8.wide-column.main-posts {
     -webkit-box-shadow: 0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
     -moz-box-shadow:    0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
     box-shadow:         0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
+    background-color: white;
 }
 
 .post {
@@ -173,9 +194,7 @@ footer {
     height: 294px;
     width: 100%;
     margin:0 auto;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+
     }
 #left_footer,#right_footer {
     width:33%;
