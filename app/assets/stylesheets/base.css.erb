@@ -16,14 +16,16 @@ div.navbar{
     border-radius: 0;
     margin: 0;
     border: 0px;
+    background-color: black;
 }
 
 .navbar-inner{
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 0;
+    border: none;
     background-image: 0;
     border: 0px;
+    background-color: black;
 }
 
 div.container.header{
@@ -35,13 +37,28 @@ div.container.header{
     margin-bottom: 2%;
     
 }
-a.brand.ptsans:hover,ul.nav li:hover{
+a.brand.ptsans:hover{
 background: none repeat scroll 0% 0% rgb(242, 242, 242);
+color: white;
 }
 
+ul.nav li:hover{
+background: none repeat scroll 0% 0% rgb(242, 242, 242);
+color: white;
+}
+div.post{
+    background: none repeat scroll white 0% 0% ;
+    overflow: hidden;
+    padding: 5px 20px;
+    border-top: 1px double rgb(255, 255, 255);
+    border-bottom: 1px double rgb(234, 234, 234);
+    /*transition: all 0.4s ease 0s;*/
+}
+}
 div.post:hover{
        
     background: none repeat scroll 0% 0% rgb(242, 242, 242);
+
     
 }
 span.show{
@@ -144,7 +161,7 @@ div.span8.wide-column.main-posts {
 .small-post:nth-child(2) {
         margin-left: 14px;
         padding-left: 14px;
-        border-left: solid 1px;
+        border-left: 1px double #e8e5e8;
         border-top: none;
         padding-top: 0;
     }
