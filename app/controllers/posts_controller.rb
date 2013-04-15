@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 before_filter :authenticate_user!, except: [:index, :show]
-
+#after_create :send_email
 	#after making index action, you need to make index.html.erb
 	def index
 	  #this accesses all the posts from the model 'Post' and stores them in @post
@@ -61,5 +61,8 @@ before_filter :authenticate_user!, except: [:index, :show]
 		redirect_to posts_path
 	end
 
+	def send_email
+		HtnMailer.htn_newsletter(self.fan).deliver
+	end
 
 end

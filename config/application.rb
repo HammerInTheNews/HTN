@@ -25,16 +25,17 @@ module HTN
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
-HTN::Application.configure do
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
-    :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => "Hammeringthenews@gmail.com",
-    :password  => "nY283^vu", # SMTP password is any valid API key
-    :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'http://localhost:3000', # your domain to identify your server when connecting
-  }
+#This tells rails we want to use smtp to send mail
+config.action_mailer.delivery_method = :smtp
+
+config.action_mailer.smtp_settings = {
+
+ :address              => "smtp.gmail.com",
+ :port                 => 587,
+ :user_name            => 'hammeringthenews@gmail.com',
+ :password             => '00boss00',
+ :authentication       => 'plain',
+ :enable_starttls_auto => true  }
 
   # …
 end
