@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411235215) do
+ActiveRecord::Schema.define(:version => 20130415233539) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -68,17 +68,28 @@ ActiveRecord::Schema.define(:version => 20130411235215) do
     t.integer  "user_id"
   end
 
+  create_table "fans", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "subscribed"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+# Could not dump table "images" because of following StandardError
+#   Unknown type 'filetype' for column 'image'
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.integer  "user_id"
-    t.string   "image"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image"
     t.string   "slug"
   end
 
@@ -116,10 +127,6 @@ ActiveRecord::Schema.define(:version => 20130411235215) do
     t.datetime "updated_at",                             :null => false
     t.string   "uid"
     t.string   "provider"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"

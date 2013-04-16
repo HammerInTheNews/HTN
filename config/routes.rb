@@ -15,6 +15,8 @@ HTN::Application.routes.draw do
     resources :posts
   end
 
+  resources :fans
+
   
   
   # The priority is based upon order of creation:

@@ -6,11 +6,12 @@ class HtnMailer < ActionMailer::Base
   #
   #   en.htn_mailer.htn_newsletter.subject
   #
-  def htn_newsletter(fan)
+  def htn_newsletter(fan, post)
     @fan = fan
+    @post = post
     @greeting = "Hi"
 
-    mail to: "#{fan.name"} <#{fan.email}", subject: "HTN's Latest News"
+    mail to: "#{fan.name} <#{fan.email}>", subject: "HTN's Latest News"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml

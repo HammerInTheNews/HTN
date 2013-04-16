@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 before_filter :authenticate_user!, except: [:index, :show]
-#after_create :send_email
+
 	#after making index action, you need to make index.html.erb
 	def index
 	  #this accesses all the posts from the model 'Post' and stores them in @post
@@ -8,8 +8,13 @@ before_filter :authenticate_user!, except: [:index, :show]
 	  if params[:tag]
         @posts = Post.includes(:comments).order("created_at DESC").tagged_with(params[:tag]).page(params[:page]).per(6)
 	  else	
-	    @posts = Post.includes(:comments).order("created_at DESC").page(params[:page]).per(6)
+	    @posts = Post.includes(:comments).order("created_at DESC")
 	  end
+	  
+
+
+		@q = @posts.search(params[:q])
+		@posts = @q.result(:distinct => true).page(params[:page]).per(6)
 	  #This enables atom feeds
 	  # respond_to do |format|
    #      format.html
@@ -24,12 +29,13 @@ before_filter :authenticate_user!, except: [:index, :show]
 	end
 
 	def create
-		#protects post
+		   #protects post
 		@post = current_user.posts.build(params[:post])
-		#if post is valid - go to index
+		   #if post is valid - go to index
 	  	if @post.save
+	  		
 	  		#back to the index for you
-	  		redirect_to posts_path
+	  	   redirect_to posts_path
 	  	else
 	  		render :new #gives you the new view
 	  	end
@@ -61,8 +67,5 @@ before_filter :authenticate_user!, except: [:index, :show]
 		redirect_to posts_path
 	end
 
-	def send_email
-		HtnMailer.htn_newsletter(self.fan).deliver
-	end
 
 end

@@ -22,20 +22,23 @@
      
         <% post = @posts.shift %>
 
+        <% if post %>
+          <h1 class="headline"><%= link_to post.title, post %></h1>
+          <%= link_to (image_tag post.image.url(:large)), post_path(post) %>
+          <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
-        <h1 class="headline"><%= link_to post.title, post %></h1>
-        <%= link_to (image_tag post.image.url(:large)), post_path(post) %>
-        <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
+          <p>
+            <div class="image-remove"><%= raw post.body %></div>
+            <%= link_to "read more", post %>
+             |||
+                <%= link_to "Leave a comment",
+                   post_path(  post, :anchor => "disqus_thread"),
+                  :"data-disqus-identifer" =>   post.id %>
+          </p>
+        <% else %>
+          <h2 class="headline">Nothing to see here.</h2>
 
-        <p>
-          <div class="image-remove"><%= raw post.body %></div>
-          <%= link_to "read more", post %>
-           |||
-              <%= link_to "Leave a comment",
-                 post_path(  post, :anchor => "disqus_thread"),
-                :"data-disqus-identifer" =>   post.id %>
-        </p>
-
+        <% end %>
       </div>
 
       <div class="other-posts">
