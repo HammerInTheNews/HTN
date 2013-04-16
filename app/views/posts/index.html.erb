@@ -24,7 +24,7 @@
 
         <% if post %>
           <h1 class="headline"><%= link_to post.title, post %></h1>
-          <%= link_to (image_tag post.image.url(:large)), post_path(post) %>
+          <%= link_to (image_tag post.image.url(:large)), post_path(post), class: "img-polaroid" %>
           <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
 
           <p>

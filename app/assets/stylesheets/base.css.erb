@@ -16,18 +16,25 @@ div.navbar{
     border-radius: 0;
     margin: 0;
     border: 0px;
-    background-color: black;
+    background-color: gray;
+    height:34px;
+
 }
 
-.navbar-inner{
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border: none;
-    background-image: 0;
-    border: 0px;
-    background-color: black;
-}
-
+div.navbar-inner {
+    border-radius: 0px;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -ms-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f5f5f5));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -o-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: linear-gradient(top, #f5f5f5, #f5f5f5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#'f5f5f5, endColorstr='#'f5f5f5, GradientType=0);
+    padding-left: 5px;
+    height:34px;
+    min-height: 38px;
+    border: 1px solid #D8D8D8;
+    }
 div.container.header{
     box-shadow: 0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
     -webkit-border-radius: 0px;
@@ -35,15 +42,37 @@ div.container.header{
     border-radius: 0px;
     background-image: none;
     margin-bottom: 2%;
+
     
 }
+
+
+a.date{
+    
+    margin-right: 5px;
+    margin-top: 3px;
+    float: left;
+    padding: 7px 5px 5px 5px;
+    background: #ddd;
+    font-size: 12px;
+    color: #333;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-family: "Droid Sans",Arial, Veranda, sans-serif;
+    line-height: normal
+
+}
+
+a.brand.ptsans{
+    padding-left:26px;   
+}
 a.brand.ptsans:hover{
-background: none repeat scroll 0% 0% rgb(242, 242, 242);
-color: white;
+    color: white;
 }
 
 ul.nav li:hover{
-background: none repeat scroll 0% 0% rgb(242, 242, 242);
+
 color: white;
 }
 div.post{
@@ -75,7 +104,11 @@ span.show{
     padding-top: 2%;
     padding-bottom: 2%;
 }
-
+.search-query.span2{
+    height: 14px;
+    line-height: 1.5;
+    font-size: 12px;
+}
 
 h1.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
 }
@@ -92,7 +125,8 @@ a.ptsans {
  font-family: 'PT Sans', sans-serif;   
 }
 div.span12 {
-    background-color:gray;
+    background-color: white;
+    /*background-image:url(<%= asset_path 'grey_yellow_stripes.png' %>);*/
 }
 
 div.span6.show {
