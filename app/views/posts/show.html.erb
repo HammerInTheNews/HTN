@@ -47,10 +47,8 @@
 			  	<% @posts.each do |post| %>
 	            <div class="floatLeft"><%= link_to (image_tag post.image.url(:thumb)), post_path(post) %></div>
 	            <h2 class="headline smaller-font"><%= link_to post.title, post %></h2>
-	            <div class="image-remove"><%= raw truncate_html(post.body, length: 70) %>
-	               <%= link_to "Comment?",
-	            		           post_path(  post, :anchor => "disqus_thread"),
-	                    		  :"data-disqus-identifer" =>   post.id %></div>
+	            <p class="image-remove"><%= raw truncate_html(post.body, length: 190) %>
+	               <%= link_to "read more", post %></p>
 	              <hr>
 	             
 	            <% end %>
