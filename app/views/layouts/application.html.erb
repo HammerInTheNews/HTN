@@ -143,50 +143,40 @@
             </li>
           </ul>
       </div>
-   <div id="footer">
-
-   <div id="center_footer">
-
-   <div id="left_footer"><b>Find Us On</b>
-     <ul>
-       <li><%= link_to (image_tag("iconmonstr-facebook-5-icon.png", :alt => "facebook-5-icon")),"https://www.facebook.com/hammerinthenews" %></li>
-       <li><%= link_to (image_tag("iconmonstr-google-plus-5-icon.png", :alt => "google-plus-5-icon")),"https://plus.google.com/u/1/104181851172664296773/posts" %></li>
-       <li><%= link_to (image_tag("iconmonstr-twitter-5-icon.png", :alt => "twitter-5-icon.png")),"https://www.twitter.com/hammerinthenews" %></li>
-       
-     </ul>
-     <p><% if user_signed_in? %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "Sign In", new_user_session_path %>
-        <% end %>
-     </p>
-   </div><!--left-footer-->
-      
-   <div id="right_footer">
-    <div class="span3 well">
-      <legend>Get latest news delivered to your email</legend>
-      
-      <%= form_for Fan.new do |f| %>
-        <%= f.text_field :name, class: 'span3', placeholder: 'Full Name' %>
-        <%= f.text_field :email, class: 'span3', placeholder: 'email@example.com' %>
-        <%= f.submit %>
-      <% end %>
-
-<!--      <form accept-charset="UTF-8" action="" method="post">
-      
-      <input class="span3" name="name" placeholder="Full Name" type="text">
-      
-      <input class="span3" name="email" placeholder="email@example.com" type="text">
-      
-           
-      <button class="btn btn-warning" type="submit">Sign up for emails</button>
-      </form> -->
+   <footer>
+    <div class="footer">
+       <div class="container narrow row-fluid">
+          <div class="span4 left_footer">
+           <ul>
+             <li><%= link_to (image_tag("iconmonstr-facebook-5-icon.png", :alt => "facebook-5-icon")),"https://www.facebook.com/hammerinthenews" %></li>
+             <li><%= link_to (image_tag("iconmonstr-google-plus-5-icon.png", :alt => "google-plus-5-icon")),"https://plus.google.com/u/1/104181851172664296773/posts" %></li>
+             <li><%= link_to (image_tag("iconmonstr-twitter-5-icon.png", :alt => "twitter-5-icon.png")),"https://www.twitter.com/hammerinthenews" %></li>
+   
+           </ul>
+          </div>
+          
+          <div class="span4 center_footer">
+            <h2 class="headline" style="color:white";>Recent Articles</h2>
+            <% @posts.each do |post| %>
+              <h2 class="headline smaller-font footer_links"><%= link_to post.title, post %></h2>
+            <% end %>
+          </div>
+          
+          <div class="span4 right_footer">
+            <div class="well">
+            <legend>Get latest news delivered to your email</legend>            
+              <%= form_for Fan.new do |f| %>
+              
+                <%= f.text_field :name, placeholder: 'Full Name' %>
+                <%= f.text_field :email, placeholder: 'email@example.com' %>
+                <%= f.submit %>
+               
+              <% end %>
+            </div>
+          </div>
+       </div>
     </div>
-   </div> 
-   
-   <span>© HTN corp. 2013 </span>
-   
- </div> 
+  </footer>
 </div> 
 </div> <!-- /content -->
 

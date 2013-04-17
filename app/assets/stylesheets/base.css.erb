@@ -114,12 +114,12 @@ span.show{
     font-size: 12px;
 }
 
-h1.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
+h1.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc; font-size: 48px;
 }
-h2.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
+h2.headline { font-family: 'PT Sans Narrow', sans-serif; 
 }
-h2.headline.smaller-font { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
-              font-size: 20px; line-height:100%;
+h2.headline.smaller-font { font-family: 'PT Sans Narrow', sans-serif; 
+              font-size: 24px; line-height:100%;
 }
 
 h1.headline a { color: black;} 
@@ -236,59 +236,63 @@ div.span8.wide-column.main-posts {
     background-color: #EFEECB;
  
 }
-
+h2.headline.smaller-font.footer_links a{
+    color:white;
+    font-size:20px;
+}
+h2.headline.show{
+    font-size: 43px;
+}
+.main_post_show,.related_articles_show{
+    box-shadow: 0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
+}
 footer { 
-	
+	background-color:black;
     height: 220px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-
-
-
 } 
-.sub_twit div { padding-left: 20px;  0 50% no-repeat; } 
-
-#footer{
-    height:130px;
-    }
-#center_footer{
+.container.narrow.row-fluid{
+    background-color: black;
+}
+.left_footer{
+    width:33%;
+    padding:20px;
+    float:left;
+    height: 294px;
+}
+.right_footer{
+    width:33%;
+    padding:20px;
+    float:right;
+    height:294px;
+}
+.center_footer{
     background:#000;
     height: 294px;
     width: 100%;
     margin:0 auto;
-
-    }
-#left_footer,#right_footer {
-    width:33%;
-    padding:20px;
-    float:left;
-    }
-#left_footer b{
-    color:#fff;
-    }
-#left_footer li{
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 1px dashed white;
+    border-left: 1px dashed white;
+}
+.left_footer li{
     float:left;
     margin:0 20px;
     }
-#left_footer img{
+.left_footer img{
     width:60px;
     height:60px;
-    }
-#right_footer{
-    float:right;
-    }
-#right_footer a{ 
+}
+.right_footer a{ 
     color:#aaa;
     padding:0 10px;
     line-height: 21px;
     font-size: 13px;
     font-weight:bold;
-    }
-#footer span{
-    color:#ccc;
-    font-size: 13px;
-    margin-left: 150px;
-    }
+}
+.sub_twit div { padding-left: 20px;  0 50% no-repeat; } 
+
+
 
 
