@@ -32,10 +32,6 @@ group :production do
 	gem 'pg'
 end
 
-configure :production do
-  require 'newrelic_rpm'
-end
-
 gem 'google-webfonts'
 
 
