@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   after_create :send_email
-  attr_accessible :body, :title, :tag_list, :image
+  attr_accessible :body, :title, :tag_list, :image, :image_file_name
   acts_as_taggable
   validates :title, presence: true
   validates :body, presence: true
