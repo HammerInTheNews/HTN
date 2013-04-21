@@ -30,12 +30,10 @@ config.action_mailer.delivery_method = :smtp
 
 config.action_mailer.smtp_settings = {
 
- :address              => "smtp.gmail.com",
+ :address              => "smtp.mandrillapp.com",
  :port                 => 587,
  :user_name            => 'hammeringthenews@gmail.com',
- :password             => '00boss00',
- :authentication       => 'plain',
- :enable_starttls_auto => true  
+ :password             => ENV["MANDRILL_PASSWORD"]
 }
 
     # Only load the plugins named here, in the order given (default is alphabetical).
