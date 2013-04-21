@@ -2,8 +2,8 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  after_create :send_email
-  attr_accessible :body, :title, :tag_list, :image, :image_file_name
+  after_create :queue_send_email
+  attr_accessible :body, :title, :tag_list, :image
   acts_as_taggable
   validates :title, presence: true
   validates :body, presence: true
@@ -12,7 +12,17 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :images
   belongs_to :user
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "80x80>", :large => "600x600>" }, :default_url => "/images/:style/missing.png"                                  
+  has_attached_file :image, 
+    :styles => { :medium => "300x300>", :thumb => "80x80>", :large => "600x600>" }, 
+    :default_url => "/images/:style/missing.png",
+    :storage => :s3, s3_credentials: {access_key_id: "AKIAJQFILE7GM3P4IOUA",
+    secret_access_key: "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",
+    bucket: "hammerinthenews"}
+
+
+  def queue_send_email
+    delay.send_email
+  end
 
   def send_email
     Fan.all.each do |fan|

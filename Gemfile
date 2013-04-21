@@ -18,7 +18,8 @@ gem "friendly_id", "~> 4.0.9" # Note: You MUST use 4.0.9 or greater for Rails 3.
 gem "ransack"
 gem 'newrelic_rpm'
 #gem "cocaine", "= 0.3.2"
-
+gem 'delayed_job_active_record'
+gem 'delayed_job'
 #gem "fog", "~> 1.3.1"
 
 # Bundle edge Rails instead:
