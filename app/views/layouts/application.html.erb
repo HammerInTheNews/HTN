@@ -45,7 +45,8 @@
         <span class="icon-bar"></span>
       </a>
       <a class="date"><%= Time.now.strftime("%A,  %B %d, %Y") %></a>
-      
+      <!-- Docs at http://simpleweather.monkeecreate.com -->
+<!--       <a class="date" id="weather"></a> -->
         
       <div class="nav-collapse">
         <ul class="nav">
@@ -164,7 +165,7 @@
           
           <div class="span4 right_footer">
             <div class="well">
-            <legend>Get latest news delivered to your email</legend>            
+            <legend class="headline">GET THE NEWS DELIVERED <br> RIGHT TO YOUR INBOX</legend>            
               <%= form_for Fan.new do |f| %>
               
                 <%= f.text_field :name, placeholder: 'Full Name' %>
