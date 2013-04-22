@@ -33,10 +33,11 @@
 		    <div id ="disqus_thread">
 				<%= disqus_thread.html_safe %>
 			</div><!--disqus comments-->
-
+		  <% if user_signed_in? %>
 		    <p><%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-info' %>
 		    <%= link_to 'Back', posts_path, :class => 'btn btn-info' %>
-		    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>	
+		    <%= link_to 'delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></p>
+		  <% end %>	
 			</span>
 		  </div><!--left column - main post-->
 		   
