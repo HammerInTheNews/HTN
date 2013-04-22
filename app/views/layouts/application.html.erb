@@ -49,15 +49,22 @@
 <!--       <a class="date" id="weather"></a> -->
         
       <div class="nav-collapse">
+        
         <ul class="nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
+            <% if user_signed_in? %>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              <li><%= link_to "New Post", new_post_path, :class => "ptsans" %></li>
+            <% else %>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+              <li><%= mail_to "hammeringthenews@gmail.com", "Email the editor", :subject => "A question for HTN", :class => "ptsans" %></li>              
+            <% end %>  
             </ul>
           </li>
         </ul>
+        
             <!-- This is the search field -->
             <%= search_form_for @q,class: "navbar-search pull-right" do |form| %>
               <%= form.text_field :body_cont, class: "search-query span2", placeholder: "Search" %>
@@ -90,9 +97,7 @@
               <a class="brand ptsans" href="/posts">Hammer In The News</a>
               <div class="nav-collapse collapse">
                 <ul class="nav">
-                  <li><a class="active ptsans" "/posts">Home</a></li>
-                  <li><a class="ptsans" href="#">Link</a></li>
-                  <li><%= link_to "New Post", new_post_path, :class => "ptsans" %></li>
+                  
                 </ul>
                 <form class="navbar-form pull-right">
                   <input type="text" class="span2">
@@ -127,12 +132,8 @@
     <div class="footer">
        <div class="container narrow row-fluid">
           <div class="span4 left_footer">
-           <ul>
-             <li><%= link_to (image_tag("iconmonstr-facebook-5-icon.png", :alt => "facebook-5-icon")),"https://www.facebook.com/hammerinthenews" %></li>
-             <li><%= link_to (image_tag("iconmonstr-google-plus-5-icon.png", :alt => "google-plus-5-icon")),"https://plus.google.com/u/1/104181851172664296773/posts" %></li>
-             <li><%= link_to (image_tag("iconmonstr-twitter-5-icon.png", :alt => "twitter-5-icon.png")),"https://www.twitter.com/hammerinthenews" %></li>
-   
-           </ul>
+            <%= image_tag("icon_256.png", :alt => "Internet Badge", :class => "footer_badge") %>
+
           </div>
           
           <div class="span4 center_footer">
