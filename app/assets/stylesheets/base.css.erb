@@ -135,14 +135,28 @@ div.span4.widgets{
 legend.headline { font-family: 'PT Sans Narrow', sans-serif; font-size:30px;}
 h2.headline.narrow { font-family: 'PT Sans Narrow', sans-serif; font-size:39px; font-weight: 500;}
 
-h1.headline { font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc; font-size: 48px;
+h1.headline { 
+    font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc; 
+    font-weight: 500;
+    font-size: 48px;
 }
 h2.headline { font-family: 'PT Sans Narrow', sans-serif; 
 }
-h2.headline.smaller-font, { font-family: 'PT Sans Narrow', sans-serif; 
-              font-size: 24px; line-height:100%;
+h2.headline.smaller-font{ 
+    font-family: 'PT Sans Narrow', sans-serif; 
+    font-size: 28px; line-height:100%; font-weight: 500;
 }
-
+h2.headline.smaller-font.footer_links{
+    line-height:20px;
+}
+h2.headline.smaller-font.footer_links a{
+    color:white;
+    font-family: 'PT Sans Narrow', sans-serif; 
+    font-size: 20px; line-height:100%; font-weight: 700;
+}
+h2.headline.show{
+    font-size: 43px;
+}
 h1.headline a { color: black;} 
 h2.headline a { color: black;} 
 .subheadline { font-family: 'PT Sans', sans-serif; font-weight: 900; color: black;}
@@ -257,19 +271,8 @@ p.image-remove{
     background-color: #EFEECB;
  
 }
-h2.headline.smaller-font{
-    line-height:26px;    
-}
-h2.headline.smaller-font.footer_links{
-    line-height:20px;
-}
-h2.headline.smaller-font.footer_links a{
-    color:white;
-    font-size:20px;
-}
-h2.headline.show{
-    font-size: 43px;
-}
+
+
 .main_post_show,.related_articles_show{
     box-shadow: 0px 0px 2px white inset, 0px 0px 5px rgb(202, 202, 202);
 }
