@@ -9,7 +9,7 @@
 		    
 			<!--<%#= image_tag @post.image.url(:medium) %>-->		    	
     		
-    		<div class="subheadline">Share with friends and foes:</div>
+    		<div class="subheadline">Share with Friends:</div>
 			
 			<!-- Lockerz Share BEGIN -->
 			<div class="a2a_kit a2a_default_style">
@@ -26,9 +26,9 @@
 			<script type="text/javascript" src="http://static.addtoany.com/menu/page.js"></script>
 			<!-- Lockerz Share END -->
 
-	    	<h2 class="headline">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
+	    	<h2 class="headline smaller-font">Tags:</h2><%= raw @post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %>
 	    				    
-		    <h2 class="headline">Comments</h2>
+		    <h2 class="headline smaller-font">We want to hear from <strong>you!</strong></h2>
 		    
 		    <div id ="disqus_thread">
 				<%= disqus_thread.html_safe %>
