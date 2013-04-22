@@ -24,8 +24,8 @@
 
         <% if post %>
           <h1 class="headline"><%= link_to post.title, post %></h1>
-          <div class="floatLeft"><%= link_to (image_tag post.image.url(:large)), post_path(post), class:   "img-polaroid" %></div>
-          <p>Tags: <%= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></p>
+          <div class="floatLeft"><%= link_to (image_tag post.image.url(:large)), post_path(post) %></div>
+          <!-- <div>Tags: <%#= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></div> -->
 
           <p>
             <div class="image-remove"><%= truncate_html(post.body, length: 700).html_safe %></div>
@@ -98,9 +98,11 @@
 
 </div>
 
-    <%= paginate @posts %>
+    
 
 </div>
+
+   <%= paginate @posts %>
   
 <script type="text/javascript">
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
