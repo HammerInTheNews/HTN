@@ -8,8 +8,9 @@ $(document).ready(function() {
     success: function(weather) {
       
       html = '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.tempAlt+'&deg;C</li></ul>';
+      html += '<li>'+weather.tempAlt+'&deg;C</li>';
+      html += '<li class="currently">'+weather.currently+'</li></ul>';
+
   
       $("#weather").html(html);
     },

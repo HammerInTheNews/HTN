@@ -49,11 +49,14 @@ div.container.header{
 
     
 }
+.transition-test:hover{
+ background-image: url(<%= asset_path '100.jpg' %>);
 
+}
 
 a.date{
     
-    margin-right: 5px;
+    margin-right: 3px;
     margin-top: 2px;
     float: left;
     padding: 6px;
@@ -69,10 +72,16 @@ a.date{
 }
 a#weather.date{
     padding:0px;
-    height: 28px;
+    height: 26.5px;
+}
+#weather ul{
+    margin: 0 0 0px 2px;
 }
 #weather ul li{
     padding: 3px;
+}
+#weather ul li.currently{
+    margin: 0 1px;
 }
 a.brand.ptsans{
     padding-left:26px;
@@ -172,6 +181,7 @@ h2.headline a { color: black;}
     font-family: 'PT Sans Narrow', sans-serif; font-weight: 900; color: black;
     line-height: 25px;
     font-size: 25px;
+    padding-bottom:5px;
 }
 a.ptsans {
  font-family: 'PT Sans', sans-serif;   
@@ -346,6 +356,7 @@ height: 156px;
   padding: 0px;
   display: inline-block;
   border-radius: 1px;
+  list-style-type:none;
 }
 
 #weather .currently {
