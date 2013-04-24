@@ -43,7 +43,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 
 	def show
 		@post = Post.find(params[:id])
-		@posts = Post.includes(:comments).order("created_at DESC").limit(5)
+		@posts = Post.includes(:comments).order("created_at DESC").limit(5).offset(1)
 	end
 
 	def edit
