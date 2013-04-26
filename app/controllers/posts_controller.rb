@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
 before_filter :authenticate_user!, except: [:index, :show]
 
+	def get_post
+		Post.find(params[:id])
+	end
 	#after making index action, you need to make index.html.erb
 	def index
 	  #this accesses all the posts from the model 'Post' and stores them in @post
@@ -42,17 +45,17 @@ before_filter :authenticate_user!, except: [:index, :show]
 	end
 
 	def show
-		@post = Post.find(params[:id])
+		@post = get_post
 		@posts = Post.includes(:comments).order("created_at DESC").limit(5).offset(1)
 	end
 
 	def edit
- 	  @post = Post.find(params[:id])
+ 	  @post = get_post
 	end
 	
 	def update
 
-      @post = Post.find(params[:id])
+      @post = get_post
 
 	  if @post.update_attributes(params[:post]) #overwrites and updates and saves, then returns "True"
         redirect_to post_path
@@ -63,7 +66,7 @@ before_filter :authenticate_user!, except: [:index, :show]
 	end
 
 	def destroy
-		@post = Post.find(params[:id]).destroy
+		@post = get_post.destroy
 		redirect_to posts_path
 	end
 
