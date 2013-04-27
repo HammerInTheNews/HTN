@@ -59,6 +59,23 @@
           <%= link_to (image_tag("google_plus.png", :alt => "google_plus.png")),"https://plus.google.com/u/1/104181851172664296773/posts" %>
         </span>
       </div>
+        <ul class="nav pull-right">
+          <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" >
+                   <i class="icon-envelope"></i><span> Email Subscription</span>
+                    <b class="caret"></b>
+                 </a>
+                 <div class="dropdown-menu buffer">
+                  <%= form_for Fan.new do |f| %>
+                  
+                    <%= f.text_field :name, placeholder: 'Full Name' %>
+                    <%= f.text_field :email, placeholder: 'email@example.com' %>
+                    <%= f.submit %>
+                   
+                  <% end %>
+                 </div>
+               </li>
+        </ul>
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
       <a class="date"><%= Time.now.strftime("%A,  %B %d, %Y") %></a>
