@@ -73,28 +73,38 @@
        
        
     <div class="widget-box">
-
-    <h2 class="headline narrow">Show Hamilton Your Business</h2>
-    
-      <%= link_to (image_tag("St_Jacques_Logo_180px.jpg", :alt => "St-Jacques")),"http://www.stjacquesphotography.com" %>
-      <%= mail_to("hammeringthenews@gmail.com", image_tag("Ad_180.jpg",:alt => "Ad Money", :mouseover => "100.jpg"), :subject => "A question for HTN", :class => "ptsans") %>
-    
-    <h2 class="headline narrow">Connect with HTN</h2>
-    
-      <span class="twitter">
-        <%= link_to (image_tag("twitter2.png", :alt => "twitter2.png", :mouseover => "twitter2_hover.png")),"https://www.twitter.com/hammerinthenews" %>
-      </span>
+      <div class="widget-top">
+        <h2 class="headline narrow sidebar">Thriving Businesses</h2>
+        <div class="grey_stripe"></div>
+      </div>
       
-      <span class="facebook">
-        <%= link_to (image_tag("facebook.png", :alt => "facebook.png", :mouseover => "facebook_hover.png")),"https://www.facebook.com/hammerinthenews" %>
-      </span>
+        <%= link_to (image_tag("St_Jacques_Logo_180px.jpg", :alt => "St-Jacques")),"http://www.stjacquesphotography.com" %>
+        <%= mail_to("hammeringthenews@gmail.com", image_tag("Ad_180.jpg",:alt => "Ad Money", :mouseover => "100.jpg"), :subject => "A question for HTN", :class => "ptsans") %>
       
-      <span class="google">
-        <%= link_to (image_tag("google.png", :alt => "google.png", :mouseover => "google_hover.png")),"https://plus.google.com/u/1/104181851172664296773/posts" %>
-      </span>
+      <div class="widget-top">
+        <h2 class="headline narrow sidebar">Connect with HTN</h2>
+        <div class="grey_stripe"></div>
+      </div>
+      
+      <div class="social-widgets">
+        <span class="twitter">
+          <%= link_to (image_tag("twitter2.png", :alt => "twitter2.png", :mouseover => "twitter2_hover.png")),"https://www.twitter.com/hammerinthenews" %>
+        </span>
+        
+        <span class="facebook">
+          <%= link_to (image_tag("facebook.png", :alt => "facebook.png", :mouseover => "facebook_hover.png")),"https://www.facebook.com/hammerinthenews" %>
+        </span>
+        
+        <span class="google">
+          <%= link_to (image_tag("google.png", :alt => "google.png", :mouseover => "google_hover.png")),"https://plus.google.com/u/1/104181851172664296773/posts" %>
+        </span>
+      </div>  
     </div>
       
-    <h2 class="headline narrow">Like us?</h2>
+      <div class="widget-top">
+        <h2 class="headline narrow sidebar">Like Us?</h2>
+        <div class="grey_stripe"></div>
+      </div>
       <div class="fb-like-box" data-href="https://www.facebook.com/HammerInTheNews" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
 
     <h2 class="headline narrow">Share Recent Articles</h2>

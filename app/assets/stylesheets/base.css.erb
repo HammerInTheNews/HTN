@@ -52,6 +52,15 @@ div.container.header{
 div.nav-collapse.in.collapse{
     background-color:black;
 }
+.grey_stripe{
+    background: url(<%= asset_path 'grey_stripe.png' %>);
+    height: 12px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+div.widget-top{
+    padding: 15px 0;
+}
 
 a.date{
     
@@ -94,7 +103,10 @@ a.brand.ptsans{
 a.brand.ptsans:hover{
     color:gray;
 }
-
+ul.dropdown-menu li a.ptsans:hover,.dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a{
+   background-image: linear-gradient(to bottom, rgb(245, 244, 0), rgb(247, 247, 8));
+   color:black;
+}
 ul.nav li:hover{
 color: yellow;
 }
@@ -193,7 +205,15 @@ div.span4.widgets img:hover{
 
 legend.headline { font-family: 'PT Sans Narrow', sans-serif; font-size:30px;}
 h2.headline.narrow { font-family: 'PT Sans Narrow', sans-serif; font-size:39px; font-weight: 500;}
-
+h2.headline.narrow.sidebar { 
+    font-family: 'PT Sans Narrow', sans-serif; 
+    font-size:30px; 
+    font-weight: 500;
+    float: left;
+    margin-right: 10px;
+    line-height: 0px;
+    padding-bottom: 10px;
+}
 h1.headline {
     font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
     font-weight: 500;
@@ -236,7 +256,9 @@ div.span6.show {
     background-color: white;
     padding: 2%;
 }
-
+.social-widgets{
+    padding-top:10px;
+}
 p { font-family: 'PT Serif', serif; font-weight: 575; }
 
 /*This removes the image from the body text from displaying in the index view.*/
