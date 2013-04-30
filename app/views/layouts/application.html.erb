@@ -37,6 +37,7 @@
   </head>
  
 <div class="container header">
+<div class="around">
  <div class="navbar">
   <div class="navbar-inner">
     <div class="container">
@@ -78,17 +79,20 @@
                  </div>
                </li>
         </ul>
-      <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
+
       <a class="date"><%= Time.now.strftime("%A,  %B %d, %Y") %></a>
       <!-- Docs at http://simpleweather.monkeecreate.com -->
       <a class="date" id="weather"></a>
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+
       <!-- .nav, .navbar-search, .navbar-form, etc -->
 
       </div><!--collapse-->
  
     </div>
   </div>
+
 </div>
 
   <div class="row">
@@ -138,7 +142,7 @@
       
 
 </div><!-- container -->
-
+</div><!--around-->
 
 <div class="content">
     <!-- Iterate over the flash hash and output the message. -->
@@ -147,13 +151,13 @@
         <%= message %>
       </div>
     <%end %>
-
+<div id="backtotop">Scroll to Top</div>
       <%= yield %>
 
    <div id="footer-spacer"></div>
 
    <div class="pagination"></div>
-    
+  
    <footer>
     <div class="footer">
        <div class="container narrow row-fluid">

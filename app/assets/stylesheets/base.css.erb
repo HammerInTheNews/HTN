@@ -25,7 +25,9 @@ div.navbar{
     height:34px;
 
 }
-
+div.around{
+    border-bottom:13px solid yellow;
+}
 div.navbar-inner {
     border-radius: 0px;
     background-image: -moz-linear-gradient(top, #f5f5f5, #f5f5f5);
@@ -426,3 +428,42 @@ height: 156px;
   margin: 0 10px;
 }
 
+#backtotop {
+    cursor : pointer;
+    display : none;
+    margin : 0px 0px 0px 91%;
+    position : fixed;
+    bottom : 10px;
+    font-size : 90%;
+    padding : 10px;
+    width : 100px;
+    text-align : center;
+    background-color : #000;
+    border-radius : 8px;
+    -webkit-border-radius : 8px;
+    -moz-border-radius : 8px;
+    filter : alpha(opacity=60);
+    -khtml-opacity : 0.6;
+    -moz-opacity : 0.6;
+    opacity : 0.6;
+    color : #FFF;
+    font-size : 14px;
+    z-index : 1000;
+}
+#backtotop:hover
+{
+    filter : alpha(opacity=90);
+    -khtml-opacity : 0.9;
+    -moz-opacity : 0.9;
+    opacity : 0.9;
+}
+#content{
+    margin : 20px auto 20px auto;
+    padding : 20px;
+    border : 1px solid #333;
+    width : 900px;
+    height  : auto;
+    background : #FFF;
+    position : relative;
+    text-align : left;
+}
