@@ -214,6 +214,12 @@ h2.headline.narrow.sidebar {
     line-height: 0px;
     padding-bottom: 10px;
 }
+h2.headline.narrow.title { 
+    font-family: 'PT Sans Narrow', sans-serif; 
+    font-size:39px; 
+    font-weight: 500;
+    margin-left:5%;
+}
 h1.headline {
     font-family: 'PT Sans Narrow', sans-serif; text-shadow: 1px 1px 1px #ccc;
     font-weight: 500;
@@ -392,6 +398,8 @@ background-color:black;
     padding-right: 20px;
     border-right: 1px dashed yellow;
     border-left: 1px dashed yellow;
+    overflow:hidden;
+    text-overflow:ellipsis
 }
 
 
@@ -463,3 +471,11 @@ background-color:black;
 .slider { position: relative; overflow: auto; }
     .slider li { list-style: none; }
         .slider ul li { float: left; }
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}

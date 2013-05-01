@@ -163,7 +163,7 @@
     <div class="footer">
        <div class="container narrow row-fluid">
           <div class="span4 left_footer">
-            <h2 class="headline narrow" style="color:white";>What people are saying...</h2>
+            <h2 class="headline narrow title" style="color:white";>What people are saying...</h2>
             <div class="slider">
                 <ul>
                     <li> <%= link_to (image_tag("This_is_that.JPG", :alt => "this_is_that.JPG")),"https://twitter.com/CBCThisIsThat/status/289788974279585792" %></li>
@@ -175,8 +175,8 @@
             </div>
           </div>
           
-          <div class="span4 center_footer">
-            <h2 class="headline" style="color:white";>Recent Articles</h2>
+          <div class="span4 center_footer clearfix">
+            <h2 class="headline narrow" style="color:white";>Recent Articles</h2>
             <% recent_posts.each do |post| %>
               <h2 class="headline smaller-font footer_links"><%= link_to post.title, post %></h2>
             <% end %>
