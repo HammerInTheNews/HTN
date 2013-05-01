@@ -32,7 +32,8 @@
       js.src = "http://connect.facebook.net/en_GB/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
+    <!--for the unslider-->
+    <script src="//unslider.com/unslider.min.js"></script>
 
   </head>
  
@@ -162,8 +163,16 @@
     <div class="footer">
        <div class="container narrow row-fluid">
           <div class="span4 left_footer">
-            <%= image_tag("icon_256.png", :alt => "Internet Badge", :class => "footer_badge") %>
-
+            <h2 class="headline narrow" style="color:white";>What people are saying...</h2>
+            <div class="slider">
+                <ul>
+                    <li> <%= link_to (image_tag("This_is_that.JPG", :alt => "this_is_that.JPG")),"https://twitter.com/CBCThisIsThat/status/289788974279585792" %></li>
+                    <li><%= link_to (image_tag("hsr_tweet.jpg", :alt => "hsr_tweet.jpg")),"https://twitter.com/HSRTransit/status/299550260802490368" %></li>
+                    <li><%= link_to (image_tag("Terry.jpg", :alt => "terry.jpg")),"http://www.youtube.com/watch?v=zCFAgz5OT2o" %></li>
+                    <li><%= link_to (image_tag("cbc_slide.png", :alt => "cbc_slide.png")),"http://www.cbc.ca/hamilton/news/story/2013/01/11/hamilton-hammer-in-the-news.html" %></li>
+                    <li><%= link_to (image_tag("paul_wilson.png", :alt => "paul_wilson.png")),"https://twitter.com/PaulWilsonCBC/status/327446287345672192" %></li>
+                </ul>
+            </div>
           </div>
           
           <div class="span4 center_footer">
