@@ -130,9 +130,9 @@ div.post:hover, div.top-post:hover{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    border-left:1px solid #F1EFEF;
+    
     border-top:1px solid #EAE8E8;
-    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
     
 }
 div.dropdown-menu.buffer{
@@ -480,4 +480,31 @@ background-color:black;
    display: block; 
    height: 0; 
    clear: both;
+}
+
+.class_box_shadow{
+    width: 374px;
+    min-width: 200px;
+    min-height: 130px;
+    margin: auto;
+    background: #ccc;
+    border: 5px solid white;
+    position:relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+div .coffee input{
+    
+    webkit-transition:all .4s ease-in;
+}
+
+div .coffee input:hover{
+    -webkit-box-shadow: 2px 2px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 2px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 2px 0px rgba(50, 50, 50, 0.75);
+    transition: all 0.4s ease-out 0s;    
+}
+div.container.narrow.row-fluid{
+    width:1170px;
 }
