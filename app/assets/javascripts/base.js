@@ -47,3 +47,14 @@ $(function() {
 $(function() {
     $('.slider').unslider();
 });
+
+
+$(function() {
+    $(window).resize(function() {
+        var $i = $('img#HTN_SKINNY_BANNER_lower_res');
+        var $c = $i.parent();
+        var i_ar = $i.width() / $i.height(), c_ar = $c.width() / $c.height();            
+        $i.width(i_ar > c_ar ? $c.width() : $c.height() * (i_ar));
+    });
+    $(window).resize();
+});
