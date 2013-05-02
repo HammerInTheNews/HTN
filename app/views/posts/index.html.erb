@@ -24,7 +24,7 @@
 
         <% if post %>
           <h1 class="headline"><%= link_to post.title, post %></h1>
-          <div class="floatLeft"><%= link_to (image_tag post.image.url(:large)), post_path(post) %></div>
+          <div class="floatLeft main_image"><%= link_to (image_tag post.image.url(:large)), post_path(post) %></div>
           <!-- <div>Tags: <%#= raw post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ') %></div> -->
 
           <p>
@@ -37,7 +37,7 @@
           </p>
         <% else %>
           <h2 class="headline">Nothing to see here.</h2>
-
+          <!-- put some funny image here -->
         <% end %>
       </div>
 
@@ -109,6 +109,13 @@
 
     <h2 class="headline narrow">Share Recent Articles</h2>
  
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://s3.amazonaws.com/hammerinthenews/0HTN/coffee_180.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 
     
 
