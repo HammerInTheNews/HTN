@@ -28,7 +28,6 @@ div.navbar-inner {
     background-image: -webkit-linear-gradient(top, #f5f5f5, #f5f5f5);
     background-image: -o-linear-gradient(top, #f5f5f5, #f5f5f5);
     background-image: linear-gradient(top, #f5f5f5, #f5f5f5);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#'f5f5f5, endColorstr='#'f5f5f5, GradientType=0);
     padding-left: 5px;
     height: 34px;
     min-height: 38px;
@@ -250,7 +249,7 @@ p {
     font-weight: 575; }
  
 /*This removes the image from the body text from displaying in the index view.*/
-div.image-remove p img {
+div.image-remove p img, div.image-remove p iframe{
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important; }
