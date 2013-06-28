@@ -46,20 +46,6 @@ ActiveRecord::Schema.define(:version => 20130421175923) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "bootsy_image_galleries", :force => true do |t|
-    t.integer  "bootsy_resource_id"
-    t.string   "bootsy_resource_type"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-  end
-
-  create_table "bootsy_images", :force => true do |t|
-    t.string   "image_file"
-    t.integer  "image_gallery_id"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
   create_table "comments", :force => true do |t|
     t.string   "body"
     t.integer  "post_id"
@@ -92,19 +78,12 @@ ActiveRecord::Schema.define(:version => 20130421175923) do
     t.datetime "updated_at", :null => false
   end
 
-# Could not dump table "images" because of following StandardError
-#   Unknown type 'filetype' for column 'image'
-
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
     t.string   "image"
     t.string   "slug"
   end
