@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
   #to use delayed job, put :queue_send_email after 'after_create'
-  after_create :send_email
+  #after_create :send_email
   attr_accessible :body, :title, :tag_list, :image
   acts_as_taggable
   validates :title, presence: true
@@ -20,15 +20,15 @@ class Post < ActiveRecord::Base
     bucket: "hammerinthenews"}
 
 
-  def queue_send_email
-    delay.send_email
-  end
+  # def queue_send_email
+  #   delay.send_email
+  # end
 
-  def send_email
-    Fan.all.each do |fan|
-      HtnMailer.htn_newsletter(fan, self).deliver
-    end
-  end
+  # def send_email
+  #   Fan.all.each do |fan|
+  #     HtnMailer.htn_newsletter(fan, self).deliver
+  #   end
+  # end
 
   
 
