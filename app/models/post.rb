@@ -12,12 +12,15 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :images
   belongs_to :user
-  has_attached_file :image, 
-    :styles => { :medium => "160x160>", :thumb => "180x180>", :large => "660x660>" }, 
+  has_attached_file :image,
+    :styles => { :medium => "160x160>", :thumb => "180x180>", :large => "660x660>" },
     :default_url => "/images/:style/missing.png",
-    :storage => :s3, s3_credentials: {access_key_id: "AKIAJQFILE7GM3P4IOUA",
-    secret_access_key: "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",
-    bucket: "hammerinthenews"}
+    :storage => :s3,
+    s3_credentials: {
+      access_key_id: "AKIAJQFILE7GM3P4IOUA",
+      secret_access_key: "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",
+      bucket: "hammerinthenews"
+    }
 
 
   # def queue_send_email
@@ -30,6 +33,11 @@ class Post < ActiveRecord::Base
   #   end
   # end
 
-  
+
+  private
+
+  def send_email
+    PostMailerJob.new.async.perform(Fan.all, self)
+  end
 
 end
