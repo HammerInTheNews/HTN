@@ -23,6 +23,8 @@ gem 'delayed_job_active_record'
 gem 'delayed_job'
 #gem "fog", "~> 1.3.1"
 
+gem 'sucker_punch', '~> 1.0'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 #changed production for heroku
